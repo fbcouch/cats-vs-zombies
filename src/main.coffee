@@ -6,9 +6,15 @@ window.catsvzombies or= {}
 #catsvzombies = window.catsvzombies
 
 manifest = [
-  {id: 'cards', src: 'assets/cards.json'}
+  {id: 'cat-cards', src: 'assets/cat-cards.json'}
+  {id: 'zombie-cards', src: 'assets/zombie-cards.json'}
   {id: 'grassy-bg', src: 'assets/grassy-bg.png'}
   {id: 'card-back', src: 'assets/card-back.png'}
+  {id: 'mana-mouse', src: 'assets/mana-mouse.png'}
+  {id: 'mana-bird', src: 'assets/mana-bird.png'}
+  {id: 'mana-fish', src: 'assets/mana-fish.png'}
+  {id: 'mana-grave', src: 'assets/mana-grave.png'}
+  {id: 'mana-brain', src: 'assets/mana-brain.png'}
 ]
 
 canvas = {}
@@ -37,7 +43,8 @@ init = ->
   preload = new createjs.LoadQueue()
   preload.addEventListener 'complete', ->
     images = []
-    images.push {id: card.image, src: "assets/#{card.image}.png"} for card in preload.getResult 'cards'
+    images.push {id: card.image, src: "assets/#{card.image}.png"} for card in preload.getResult 'cat-cards'
+    images.push {id: card.image, src: "assets/#{card.image}.png"} for card in preload.getResult 'zombie-cards'
     preload.removeAllEventListeners 'complete'
 
     preload.addEventListener 'complete', ->

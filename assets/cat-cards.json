@@ -2,6 +2,7 @@
     {
         "image": "card-mouse",
         "name": "Mouse",
+        "type": "mana",
         "provides": {
             "mouse": 1
         }
@@ -9,6 +10,7 @@
     {
         "image": "card-bird",
         "name": "Bird",
+        "type": "mana",
         "provides": {
             "bird": 1
         }
@@ -16,6 +18,7 @@
     {
         "image": "card-fish",
         "name": "Fish",
+        "type": "mana",
         "provides": {
             "fish": 1
         }
@@ -23,11 +26,11 @@
     {
         "image": "felix-domesticus",
         "name": "Felix Domesticus",
+        "type": "creature",
         "requires": {
             "mouse": 1
         },
         "strength": 1,
         "toughness": 1
     }
-
 ]
