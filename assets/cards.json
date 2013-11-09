@@ -1,0 +1,33 @@
+[
+    {
+        "image": "card-mouse",
+        "name": "Mouse",
+        "provides": {
+            "mouse": 1
+        }
+    },
+    {
+        "image": "card-bird",
+        "name": "Bird",
+        "provides": {
+            "bird": 1
+        }
+    },
+    {
+        "image": "card-fish",
+        "name": "Fish",
+        "provides": {
+            "fish": 1
+        }
+    },
+    {
+        "image": "felix-domesticus",
+        "name": "Felix Domesticus",
+        "requires": {
+            "mouse": 1
+        },
+        "strength": 1,
+        "toughness": 1
+    }
+
+]

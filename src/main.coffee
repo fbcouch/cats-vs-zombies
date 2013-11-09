@@ -3,14 +3,22 @@
 # Apache 2.0 license
 
 window.catsvzombies or= {}
+#catsvzombies = window.catsvzombies
+
+manifest = [
+  {id: 'cards', src: 'assets/cards.json'}
+  {id: 'grassy-bg', src: 'assets/grassy-bg.png'}
+  {id: 'card-back', src: 'assets/card-back.png'}
+]
 
 canvas = {}
 stage = {}
-canvasWidth = canvasHeight = 0
+canvasWidth = 0
+canvasHeight = 0
 preload = {}
 progressbar = {}
 messageField = {}
-game = {}
+game = null
 
 init = ->
   console.log 'game init'
@@ -26,20 +34,29 @@ init = ->
   stage.addChild messageField
   stage.update()
 
-  manifest = []
-
   preload = new createjs.LoadQueue()
   preload.addEventListener 'complete', ->
-    # complete
-    messageField.text = "Loading complete"
-    stage.removeAllChildren()
-    stage.update()
-    start()
+    images = []
+    images.push {id: card.image, src: "assets/#{card.image}.png"} for card in preload.getResult 'cards'
+    preload.removeAllEventListeners 'complete'
 
-  preload.addEventListener 'progress', ->
-    #progress
-    messageField.text = "Loading #{preload.progress*100|0}%"
-    stage.update()
+    preload.addEventListener 'complete', ->
+      # complete
+      console.log 'complete'
+      messageField.text = "Loading complete"
+      stage.removeAllChildren()
+      stage.update()
+      start()
+
+    preload.addEventListener 'progress', ->
+      #progress
+      console.log 'progress'
+      messageField.text = "Loading #{preload.progress*100|0}%"
+      stage.update()
+
+    preload.loadManifest images
+
+  preload.loadManifest manifest
 
   window.onresize = (event) ->
     # size should be entire browser window
@@ -49,12 +66,15 @@ init = ->
     messageField.x = canvasWidth * 0.5
     messageField.y = canvasHeight * 0.5
 
+    game?.resize canvasWidth, canvasHeight
+
   window.onresize(null)
 
 start = ->
   console.log 'Start game...'
+  stage.removeAllChildren()
   # create and load the game
-
+  game = new window.catsvzombies.CatsVsZombiesGame stage, preload, canvasWidth, canvasHeight
   createjs.Ticker.addEventListener('tick', tick) if not createjs.Ticker.hasEventListener('tick')
   createjs.Ticker.setFPS 20
 
