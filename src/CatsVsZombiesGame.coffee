@@ -53,6 +53,8 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
       deck: []
       discard: []
       mana: []
+      mana_active: []
+      mana_used: []
       creatures: []
 
     @opponent =
@@ -62,7 +64,12 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
       deck: []
       discard: []
       mana: []
+      mana_active: []
       creatures: []
+
+    @active = null
+    @mana_played = false
+    @attacked = false
 
   show: ->
     super()
@@ -86,6 +93,8 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
 
     @player_mana = new catsvzombies.ManaIndicator @preload, @player.mana
     @active_mana = new catsvzombies.ActiveMana @preload, @player_mana.active
+    @player.mana_active = @player_mana.active
+    @player.mana_used = @player_mana.used
 
     @addChild @player_hand
     @addChild @player_discard
@@ -105,14 +114,25 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
     @addChild @opponent_deck
     @addChild @opponent_creatures
 
+    @btnPlayCard = new createjs.Bitmap @preload.getResult 'btn-play-card'
+    @btnPlayCard.addEventListener 'click', =>
+      if @current is @player and @player_hand.selected
+        @play_card_callback @player_hand.selected
+    @addChild @btnPlayCard
+
+    @btnEndTurn = new createjs.Bitmap @preload.getResult 'btn-end-turn'
+    @btnEndTurn.addEventListener 'click', =>
+      if @current is @player
+        @end_turn()
+    @addChild @btnEndTurn
+
     @draw_card @player for i in [0...4]
     @draw_card @opponent for i in [0...4]
 
-    @start_turn @player
+    @start_turn @player, true
 
   resize: (@width, @height) ->
     super(@width, @height)
-    console.log @width
     @bgimage.x = (@width - @bgimage.image.width) * 0.5
     @bgimage.y = 0
 
@@ -127,6 +147,12 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
     @opponent_discard.x = @opponent_deck.x - @opponent_discard.width
 
     @opponent_deck.y = @opponent_hand.y = @opponent_discard.y = 0
+
+    @btnEndTurn.x = @bgimage.x + @bgimage.image.width - @btnEndTurn.image.width
+    @btnEndTurn.y = @height - @btnEndTurn.image.height
+
+    @btnPlayCard.x = @btnEndTurn.x
+    @btnPlayCard.y = @btnEndTurn.y - @btnPlayCard.image.height
 
   update: (delta) ->
     super(delta)
@@ -151,10 +177,11 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
 
     @opponent_hand.x = @bgimage.x + (@bgimage.image.width - @opponent_hand.width) * 0.5
 
+    if @current is @opponent
+      @end_turn()
+
   hide: ->
     super(hide)
-
-  start_turn: (who) ->
 
   draw_card: (who) ->
     card = who.deck.pop()
@@ -162,15 +189,46 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
     who.hand.push card
 
   play_card_callback: (card) =>
-    @play_card @player, card
+    if @can_play @player, card
+      @play_card @player, card
 
   play_card: (who, card) ->
     who.hand.splice who.hand.indexOf(card), 1
     if card.proto.type is 'mana'
       who.mana.push card
+      @mana_played = true
     else if card.proto.type is 'creature'
-      who.creatures.push card
+      if @can_play who, card
+        who.creatures.push card
+        for key, val of card.proto.requires
+          who.mana_used[key] += val
+          who.mana_active[key] -= val
 
+  can_play: (who, card) ->
+    if card.proto.type is 'mana'
+      return not @mana_played
+
+    for key, val of card.proto.requires
+      return false if who.mana_active[key] < val
+    return true
+
+  start_turn: (who, first) ->
+    @current = who
+    @mana_played = false
+    @attacked = false
+
+    if who is @player
+      @player_mana.reset_used()
+    else
+      #@opponent_mana.reset_used()
+
+    @draw_card who if not first
+
+  end_turn: () ->
+    if @current is @player
+      @start_turn @opponent
+    else
+      @start_turn @player
 
 window.catsvzombies.Card = class Card extends createjs.Container
   constructor: (@preload, @proto, @faceup) ->

@@ -15,6 +15,8 @@ manifest = [
   {id: 'mana-fish', src: 'assets/mana-fish.png'}
   {id: 'mana-grave', src: 'assets/mana-grave.png'}
   {id: 'mana-brain', src: 'assets/mana-brain.png'}
+  {id: 'btn-play-card', src: 'assets/btn-play-card.png'}
+  {id: 'btn-end-turn', src: 'assets/btn-end-turn.png'}
 ]
 
 canvas = {}

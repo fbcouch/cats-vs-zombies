@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76b4a27f-7646-458e-8adc-0962bd529363" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/zombie-cards.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/cards.json" afterPath="$PROJECT_DIR$/assets/cat-cards.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/card-bird.png" afterPath="$PROJECT_DIR$/assets/card-bird.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/card-fish.png" afterPath="$PROJECT_DIR$/assets/card-fish.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/card-mouse.png" afterPath="$PROJECT_DIR$/assets/card-mouse.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/felix-domesticus.png" afterPath="$PROJECT_DIR$/assets/felix-domesticus.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" afterPath="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards.svg" afterPath="$PROJECT_DIR$/art/cards.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.coffee" afterPath="$PROJECT_DIR$/src/main.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cats-vs-zombies.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,7 +18,7 @@
     <file path="/main.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384020371688" ignored="false" />
     <file path="/Gruntfile.js" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384008445807" ignored="false" />
     <file path="/.gitignore" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384009001868" ignored="false" />
-    <file path="/CatsVsZombiesGame.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384037410060" ignored="false" />
+    <file path="/CatsVsZombiesGame.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384039789540" ignored="false" />
     <file path="/cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384029151190" ignored="false" />
     <file path="/zombie-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384031282082" ignored="false" />
     <file path="/cat-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384031310938" ignored="false" />
@@ -92,7 +85,16 @@
       <file leaf-file-name="CatsVsZombiesGame.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="348" column="51" selection-start="9217" selection-end="9217" vertical-scroll-proportion="0.7735849">
+            <state line="122" column="74" selection-start="3391" selection-end="3391" vertical-scroll-proportion="0.49056605">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="39" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -549,14 +551,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="18" selection-start="361" selection-end="361" vertical-scroll-proportion="0.2264151">
+        <state line="18" column="39" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="348" column="51" selection-start="9217" selection-end="9217" vertical-scroll-proportion="0.7735849">
+        <state line="122" column="74" selection-start="3391" selection-end="3391" vertical-scroll-proportion="0.49056605">
           <folding />
         </state>
       </provider>

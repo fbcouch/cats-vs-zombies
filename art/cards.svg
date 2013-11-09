@@ -38,16 +38,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="175.64561"
-     inkscape:cy="13.153184"
+     inkscape:cx="74.156073"
+     inkscape:cy="-90.313111"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="735"
-     inkscape:window-height="402"
-     inkscape:window-x="2394"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     inkscape:window-x="1920"
      inkscape:window-y="27"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata4399">
     <rdf:RDF>
@@ -755,8 +755,11 @@
       </g>
     </g>
     <g
-       transform="matrix(0.18074166,0,0,0.18074166,-93.094938,866.26552)"
-       id="g6838-5-4-4">
+       transform="matrix(0.18074166,0,0,0.18074166,-107.77677,879.3975)"
+       id="g6838-5-4-4"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-bird.png"
+       inkscape:export-xdpi="195.20198"
+       inkscape:export-ydpi="195.20198">
       <path
          transform="translate(-0.53571429,930.57647)"
          d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
@@ -765,7 +768,7 @@
          sodipodi:cy="165.89285"
          sodipodi:cx="106.96429"
          id="path6836-1-5-35"
-         style="color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          sodipodi:type="arc" />
       <g
          id="g6652-7-9"
@@ -789,8 +792,11 @@
       </g>
     </g>
     <g
-       transform="matrix(0.18074166,0,0,0.18074166,-79.054638,867.03459)"
-       id="g6838-5-4-1-8">
+       transform="matrix(0.18074166,0,0,0.18074166,-108.48099,895.5714)"
+       id="g6838-5-4-1-8"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-fish.png"
+       inkscape:export-xdpi="195.84496"
+       inkscape:export-ydpi="195.84496">
       <path
          transform="translate(-0.53571429,930.57647)"
          d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
@@ -799,7 +805,7 @@
          sodipodi:cy="165.89285"
          sodipodi:cx="106.96429"
          id="path6836-1-5-0-2"
-         style="color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          sodipodi:type="arc" />
       <g
          id="g6709-3-2"
@@ -823,8 +829,11 @@
       </g>
     </g>
     <g
-       transform="matrix(0.18074166,0,0,0.18074166,-108.27351,867.22016)"
-       id="g6838-5-3-1">
+       transform="matrix(0.18074166,0,0,0.18074166,-108.42421,867.22016)"
+       id="g6838-5-3-1"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-mouse.png"
+       inkscape:export-xdpi="195.91"
+       inkscape:export-ydpi="195.91">
       <path
          transform="translate(-0.53571429,930.57647)"
          d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
@@ -833,7 +842,7 @@
          sodipodi:cy="165.89285"
          sodipodi:cx="106.96429"
          id="path6836-1-4-7"
-         style="color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          sodipodi:type="arc" />
       <g
          transform="translate(-44.223245,98.529251)"
@@ -1273,43 +1282,43 @@
            y="1146.5588"
            style="font-size:9px">Felix domesticus</tspan></text>
       <g
-         id="g6838-5-3-1-3"
-         transform="matrix(0.18074166,0,0,0.18074166,40.825819,864.81948)">
+         transform="matrix(0.18074166,0,0,0.18074166,40.740689,865.14903)"
+         id="g6838-5-3-1-2">
         <path
-           sodipodi:type="arc"
-           style="color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           id="path6836-1-4-7-8"
-           sodipodi:cx="106.96429"
-           sodipodi:cy="165.89285"
-           sodipodi:rx="30.000002"
-           sodipodi:ry="30.000002"
+           transform="translate(-0.53571429,930.57647)"
            d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
-           transform="translate(-0.53571429,930.57647)" />
+           sodipodi:ry="30.000002"
+           sodipodi:rx="30.000002"
+           sodipodi:cy="165.89285"
+           sodipodi:cx="106.96429"
+           id="path6836-1-4-7-3"
+           style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           sodipodi:type="arc" />
         <g
-           id="g6579-2-0-6-8-8"
-           transform="translate(-44.223245,98.529251)">
+           transform="translate(-44.223245,98.529251)"
+           id="g6579-2-0-6-8-7">
           <path
-             sodipodi:nodetypes="cccc"
-             inkscape:connector-curvature="0"
-             id="path6555-6-2-0-8-7"
+             style="fill:#552200;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="m 153.5919,973.25849 c -12.97348,14.7866 -18.61972,30.86621 -26.26397,46.59331 16.49631,-8.2208 33.02564,-16.4274 47.22464,-25.63264 8.29992,-18.00239 -7.06476,-18.95234 -20.96067,-20.96067 z"
-             style="fill:#552200;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-          <path
-             transform="translate(5.099479,942.32895)"
-             d="m 138.20936,59.718891 c 0,1.115784 -0.90452,2.020305 -2.0203,2.020305 -1.11579,0 -2.02031,-0.904521 -2.02031,-2.020305 0,-1.115784 0.90452,-2.020305 2.02031,-2.020305 1.11578,0 2.0203,0.904521 2.0203,2.020305 z"
-             sodipodi:ry="2.0203052"
-             sodipodi:rx="2.0203052"
-             sodipodi:cy="59.718891"
-             sodipodi:cx="136.18906"
-             id="path6557-7-8-5-1-2"
-             style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-             sodipodi:type="arc" />
-          <path
-             sodipodi:nodetypes="csc"
+             id="path6555-6-2-0-8-6"
              inkscape:connector-curvature="0"
-             id="path6559-3-4-9-3-9"
+             sodipodi:nodetypes="cccc" />
+          <path
+             sodipodi:type="arc"
+             style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.30000001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+             id="path6557-7-8-5-1-0"
+             sodipodi:cx="136.18906"
+             sodipodi:cy="59.718891"
+             sodipodi:rx="2.0203052"
+             sodipodi:ry="2.0203052"
+             d="m 138.20936,59.718891 c 0,1.115784 -0.90452,2.020305 -2.0203,2.020305 -1.11579,0 -2.02031,-0.904521 -2.02031,-2.020305 0,-1.115784 0.90452,-2.020305 2.02031,-2.020305 1.11578,0 2.0203,0.904521 2.0203,2.020305 z"
+             transform="translate(5.099479,942.32895)" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              d="m 161.54685,976.54149 c 0,0 0.80788,-10.38682 4.29315,-13.63706 3.83006,-3.57178 15.27856,-3.6618 15.27856,-3.6618"
-             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+             id="path6559-3-4-9-3-2"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="csc" />
         </g>
       </g>
     </g>
@@ -1382,10 +1391,13 @@
     </g>
     <g
        id="g4214"
-       transform="translate(-443.45697,-26.769042)">
+       transform="translate(-442.0031,32.072343)"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-grave.png"
+       inkscape:export-xdpi="197.76413"
+       inkscape:export-ydpi="197.76413">
       <path
          sodipodi:type="arc"
-         style="color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          id="path6836-1-4-7-1-1"
          sodipodi:cx="106.96429"
          sodipodi:cy="165.89285"
@@ -1402,10 +1414,13 @@
     </g>
     <g
        id="g4275"
-       transform="translate(5.0507627,-73.236059)">
+       transform="translate(-18.435278,-2.020305)"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-brain.png"
+       inkscape:export-xdpi="195.914"
+       inkscape:export-ydpi="195.914">
       <path
          sodipodi:type="arc"
-         style="color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          id="path6836-1-4-7-1-17"
          sodipodi:cx="106.96429"
          sodipodi:cy="165.89285"
@@ -1510,26 +1525,6 @@
            x="-15.404823"
            y="1146.5588"
            style="font-size:9px">Zombie</tspan></text>
-      <g
-         id="g4214-0"
-         transform="translate(-293.19533,-13.936067)">
-        <path
-           sodipodi:type="arc"
-           style="color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           id="path6836-1-4-7-1-1-1"
-           sodipodi:cx="106.96429"
-           sodipodi:cy="165.89285"
-           sodipodi:rx="30.000002"
-           sodipodi:ry="30.000002"
-           d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
-           transform="matrix(0.18074166,0,0,0.18074166,333.52424,1047.3784)" />
-        <path
-           sodipodi:nodetypes="ccczcc"
-           inkscape:connector-curvature="0"
-           id="path4148-0-8"
-           d="m 348.99565,1082.0544 8.37557,0 0,-7.9155 c 0,0 -2.76578,-2.5404 -4.40016,-2.5404 -1.63436,0 -4.09228,2.3627 -4.09228,2.3627 z"
-           style="fill:#1a1a1a;stroke:#000000;stroke-width:0.18222854px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      </g>
       <g
          transform="translate(210.57924,139.72972)"
          id="g5624-3"
@@ -1740,9 +1735,29 @@
          x="-18.831657"
          y="1073.6986"
          ry="4.5456862" />
+      <g
+         id="g4214-9"
+         transform="translate(-292.65962,-14.114638)">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path6836-1-4-7-1-1-3"
+           sodipodi:cx="106.96429"
+           sodipodi:cy="165.89285"
+           sodipodi:rx="30.000002"
+           sodipodi:ry="30.000002"
+           d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
+           transform="matrix(0.18074166,0,0,0.18074166,333.52424,1047.3784)" />
+        <path
+           sodipodi:nodetypes="ccczcc"
+           inkscape:connector-curvature="0"
+           id="path4148-0-1"
+           d="m 348.99565,1082.0544 8.37557,0 0,-7.9155 c 0,0 -2.76578,-2.5404 -4.40016,-2.5404 -1.63436,0 -4.09228,2.3627 -4.09228,2.3627 z"
+           style="fill:#1a1a1a;stroke:#000000;stroke-width:0.18222854px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
     </g>
     <path
-       transform="matrix(0.18074166,0,0,0.18074166,-157.7238,1037.0257)"
+       transform="matrix(0.18074166,0,0,0.18074166,-108.47886,1021.6208)"
        d="m 136.96429,165.89285 a 30.000002,30.000002 0 1 1 -60.000005,0 30.000002,30.000002 0 1 1 60.000005,0 z"
        sodipodi:ry="30.000002"
        sodipodi:rx="30.000002"
@@ -1751,5 +1766,60 @@
        id="path6836-1-4-7-1"
        style="color:#000000;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        sodipodi:type="arc" />
+    <g
+       id="g4111"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-end-turn.png"
+       inkscape:export-xdpi="89.164085"
+       inkscape:export-ydpi="89.164085">
+      <rect
+         ry="4.5456862"
+         transform="translate(0,927.36218)"
+         y="263.3909"
+         x="-150.51273"
+         height="29.294424"
+         width="87.88327"
+         id="rect4105"
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4107"
+         y="1209.4409"
+         x="-106.70781"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle"
+           y="1209.4409"
+           x="-106.70781"
+           id="tspan4109"
+           sodipodi:role="line">End Turn</tspan></text>
+    </g>
+    <g
+       transform="translate(-4.1699219e-6,-34)"
+       id="g4111-3"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-play-card.png"
+       inkscape:export-xdpi="89.164085"
+       inkscape:export-ydpi="89.164085">
+      <rect
+         ry="4.5456862"
+         transform="translate(0,927.36218)"
+         y="263.3909"
+         x="-150.51273"
+         height="29.294424"
+         width="87.88327"
+         id="rect4105-8"
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4107-9"
+         y="1209.4409"
+         x="-106.70781"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle"
+           y="1209.4409"
+           x="-106.70781"
+           id="tspan4109-8"
+           sodipodi:role="line">Play Card</tspan></text>
+    </g>
   </g>
 </svg>
