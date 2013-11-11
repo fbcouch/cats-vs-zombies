@@ -6,10 +6,12 @@ window.catsvzombies or= {}
 
 DEBUG = false
 
-window.catsvzombies.Player = class Player
-  constructor: (@preload, @deck) ->
-    @curhp = 0
-    @maxhp = 0
+window.catsvzombies.Player = class Player extends createjs.Container
+  constructor: (@preload, @deck, @levelScreen, @play_card_callback) ->
+    @initialize()
+
+    @curhp = 20
+    @maxhp = 20
     @hand = []
     @discard = []
     @mana = []
@@ -17,9 +19,80 @@ window.catsvzombies.Player = class Player
     @mana_used = []
     @creatures = []
 
+    @deck_stack = new catsvzombies.CardStack @deck
+    @hand_stack = new catsvzombies.CardStack @hand, catsvzombies.CardStack.HAND, @play_card_callback
+    @discard_stack = new catsvzombies.CardStack @discard
+    @creatures_stack = new catsvzombies.CardStack @creatures, catsvzombies.CardStack.PERM
+
+    @mana_indicator = new catsvzombies.ManaIndicator @preload, @
+    @active_mana = new catsvzombies.ActiveMana @preload, @mana_active
+
+    @addChild @deck_stack
+    @addChild @hand_stack
+    @addChild @discard_stack
+    @addChild @creatures_stack
+    @addChild @mana_indicator
+    @addChild @active_mana
+
+  layout: (@width, @height) ->
+    @deck_stack.x = 0
+    @deck_stack.y = @height - @deck_stack.height
+
+    @discard_stack.x = @deck_stack.x + @deck_stack.width
+    @discard_stack.y = @deck_stack.y
+
+    @hand_stack.x = (@width - @hand_stack.width) * 0.5
+    @hand_stack.y = @discard_stack.y
+
+    @creatures_stack.x = (@width - @creatures_stack.width) * 0.5
+    @creatures_stack.y = 0
+
+    @mana_indicator.y = @deck_stack.y - @mana_indicator.height - 10
+    @mana_indicator.x = 10
+
+    @active_mana.x = (@width - @active_mana.width) * 0.5
+    @active_mana.y = @hand_stack.y + (@creatures_stack.y + @deck_stack.height - @hand_stack.y - @active_mana.height) * 0.5
+
+
+  update: (delta, is_turn) ->
+    @layout @width, @height
+
+    @deck_stack.update delta
+    @hand_stack.update delta
+    @discard_stack.update delta
+    @creatures_stack.update delta
+    @mana_indicator.update delta
+    @active_mana.update delta
+
+  draw_card: (flip) ->
+    card = @deck.pop()
+    card.flip() if flip
+    @hand.push card
+
+  get_selected_card: () ->
+    @hand_stack.selected
+
+window.catsvzombies.AIPlayer = class AIPlayer extends catsvzombies.Player
+  constructor: (@preload, @deck, @levelScreen, play_card_callback) ->
+    super(@preload, @deck, @levelScreen)
+
+    @play_card_callback = play_card_callback
+
+  update: (delta, is_turn) ->
+    super(delta, is_turn)
+    return if not is_turn
+
+    # TODO improve AI
+
+    @play_card_callback @, card if @parent?.can_play @, card for card in @hand
+    @mana_indicator.activate_all()
+    @play_card_callback @, card if @parent?.can_play @, card for card in @hand
+
+    @parent?.end_turn()
+
 
 window.catsvzombies.ManaIndicator = class ManaIndicator extends createjs.Container
-  constructor: (@preload, @mana_pool) ->
+  constructor: (@preload, @player) ->
     @initialize()
     @totals =
       mouse: 0
@@ -43,19 +116,11 @@ window.catsvzombies.ManaIndicator = class ManaIndicator extends createjs.Contain
       @texts[key].addEventListener 'click', (event) ->
         event.currentTarget.parent.clicked? event.currentTarget.key
 
-    @active =
-      mouse: 0
-      bird: 0
-      fish: 0
-      grave: 0
-      brain: 0
-
-    @used =
-      mouse: 0
-      bird: 0
-      fish: 0
-      grave: 0
-      brain: 0
+    @active = @player.mana_active
+    @used = @player.mana_used
+    for key of @totals
+      @active[key] = 0
+      @used[key] = 0
 
   update: ->
     @removeAllChildren()
@@ -63,7 +128,7 @@ window.catsvzombies.ManaIndicator = class ManaIndicator extends createjs.Contain
       @totals[key] = 0
 
 
-    for mana in @mana_pool
+    for mana in @player.mana
       @totals[key] += val for key, val of mana.proto.provides
 
     for key of @active
@@ -87,6 +152,9 @@ window.catsvzombies.ManaIndicator = class ManaIndicator extends createjs.Contain
 
   reset_used: () ->
     @used[key] = 0 for key of @used
+
+  activate_all: () ->
+    @active[key] = val - @used[key] for key, val of @totals
 
 window.catsvzombies.ActiveMana = class ActiveMana extends createjs.Container
   constructor: (@preload, @active_mana) ->
