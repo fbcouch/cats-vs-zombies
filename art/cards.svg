@@ -37,16 +37,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="74.156073"
-     inkscape:cy="-90.313111"
+     inkscape:zoom="2.8"
+     inkscape:cx="-112.72485"
+     inkscape:cy="-222.14057"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1024"
+     inkscape:window-width="1440"
+     inkscape:window-height="871"
      inkscape:window-x="1920"
-     inkscape:window-y="27"
+     inkscape:window-y="180"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata4399">
@@ -1758,7 +1758,7 @@
     </g>
     <path
        transform="matrix(0.18074166,0,0,0.18074166,-108.47886,1021.6208)"
-       d="m 136.96429,165.89285 a 30.000002,30.000002 0 1 1 -60.000005,0 30.000002,30.000002 0 1 1 60.000005,0 z"
+       d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
        sodipodi:ry="30.000002"
        sodipodi:rx="30.000002"
        sodipodi:cy="165.89285"
@@ -1769,8 +1769,8 @@
     <g
        id="g4111"
        inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-end-turn.png"
-       inkscape:export-xdpi="89.164085"
-       inkscape:export-ydpi="89.164085">
+       inkscape:export-xdpi="181.30031"
+       inkscape:export-ydpi="181.30031">
       <rect
          ry="4.5456862"
          transform="translate(0,927.36218)"
@@ -1797,8 +1797,8 @@
        transform="translate(-4.1699219e-6,-34)"
        id="g4111-3"
        inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-play-card.png"
-       inkscape:export-xdpi="89.164085"
-       inkscape:export-ydpi="89.164085">
+       inkscape:export-xdpi="181.30031"
+       inkscape:export-ydpi="181.30031">
       <rect
          ry="4.5456862"
          transform="translate(0,927.36218)"
@@ -1820,6 +1820,202 @@
            x="-106.70781"
            id="tspan4109-8"
            sodipodi:role="line">Play Card</tspan></text>
+    </g>
+    <g
+       id="g4083"
+       transform="matrix(0.39296246,0,0,0.39296246,-159.7632,664.81484)"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-attack.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect4105-1"
+         width="123.23862"
+         height="101.52029"
+         x="16.162441"
+         y="1442.7861"
+         ry="19.697943" />
+      <g
+         transform="translate(1.474613,-0.93005934)"
+         id="g4057">
+        <g
+           style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+           id="g4029"
+           transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,1076.0791,386.90507)">
+          <path
+             sodipodi:nodetypes="cccccccccccccc"
+             transform="translate(0,927.36218)"
+             inkscape:connector-curvature="0"
+             id="path3257"
+             d="m 64.437962,624.01535 13.343783,0 0,-19.69797 20.203051,0 0,-11.42136 -20.203051,0 10.954285,-66.50956 -16.336282,-20.33628 -16.336282,20.33628 8.374496,66.50956 -20.415106,0 0,11.42136 20.415106,0 z"
+             style="fill:#ececec;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             sodipodi:nodetypes="cc"
+             transform="translate(0,927.36218)"
+             inkscape:connector-curvature="0"
+             id="path4027"
+             d="M 71.215754,591.1854 C 70.370391,570.3107 68.989323,549.70385 70.710678,527.54579"
+             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <g
+           style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+           id="g4029-5"
+           transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-1023.8794,487.31964)">
+          <path
+             sodipodi:nodetypes="cccccccccccccc"
+             transform="translate(0,927.36218)"
+             inkscape:connector-curvature="0"
+             id="path3257-2"
+             d="m 64.437962,624.01535 13.343783,0 0,-19.69797 20.203051,0 0,-11.42136 -20.203051,0 10.954285,-66.50956 -16.336282,-20.33628 -16.336282,20.33628 8.374496,66.50956 -20.415106,0 0,11.42136 20.415106,0 z"
+             style="fill:#ececec;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             sodipodi:nodetypes="cc"
+             transform="translate(0,927.36218)"
+             inkscape:connector-curvature="0"
+             id="path4027-3"
+             d="M 71.215754,591.1854 C 70.370391,570.3107 68.989323,549.70385 70.710678,527.54579"
+             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g4083-3"
+       transform="matrix(0.39296246,0,0,0.39296246,-109.76321,664.81484)"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-defend.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect4105-1-1"
+         width="123.23862"
+         height="101.52029"
+         x="16.162441"
+         y="1442.7861"
+         ry="19.697943" />
+      <g
+         id="g4139"
+         style="stroke-width:2.00019097;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="translate(-0.3947017,-3.9053133)">
+        <path
+           sodipodi:nodetypes="ccccscc"
+           transform="matrix(2.5447723,0,0,2.5447723,224.33724,670.84973)"
+           inkscape:connector-curvature="0"
+           id="path4135"
+           d="m -74.335694,309.42857 c 5.41173,5.0968 11.012533,5.84491 16.89999,0 5.321103,3.74672 10.648688,7.41566 16.89999,0 l 0,21.46429 c 0,0 -10.466347,9.39447 -16.89999,9.3252 -6.512526,-0.0701 -16.89999,-9.80569 -16.89999,-9.80569 z"
+           style="fill:#e6e6e6;stroke:#000000;stroke-width:0.78600001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           transform="matrix(2.5447723,0,0,2.5447723,224.33724,670.84973)"
+           inkscape:connector-curvature="0"
+           id="path4137"
+           d="M -57.142857,315.17857 -57.321428,336.25"
+           style="fill:none;stroke:#000000;stroke-width:0.78600001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+    </g>
+    <g
+       id="g6403-5"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/card-back.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(-24.285714,337.82142)">
+      <path
+         style="color:#000000;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.95585155;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m -121.6875,987.88897 c -4.89671,0 -8.84375,3.94704 -8.84375,8.84375 l 0,107.31248 c 0,4.8967 3.94704,8.8438 8.84375,8.8438 l 82.3125,0 c 4.896714,0 8.84375,-3.9471 8.84375,-8.8438 l 0,-107.31248 c 0,-4.89671 -3.947036,-8.84375 -8.84375,-8.84375 l -82.3125,0 z m 2.0625,3.15625 78.15625,0 c 4.649393,0 8.40625,3.75686 8.40625,8.40628 l 0,101.9062 c 0,4.6494 -3.756857,8.375 -8.40625,8.375 l -78.15625,0 c -4.64939,0 -8.375,-3.7256 -8.375,-8.375 l 0,-101.9062 c 0,-4.64942 3.72561,-8.40628 8.375,-8.40628 z"
+         id="rect4929-7"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/active-overlay.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+    </g>
+    <g
+       id="g4083-7"
+       transform="matrix(0.39296246,0,0,0.39296246,-159.7632,706.81484)"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-attack-untoggled.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect4105-1-4"
+         width="123.23862"
+         height="101.52029"
+         x="16.162441"
+         y="1442.7861"
+         ry="19.697943" />
+      <g
+         transform="translate(1.474613,-0.93005934)"
+         id="g4057-7"
+         style="fill:#666666">
+        <g
+           style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;fill:#666666"
+           id="g4029-6"
+           transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,1076.0791,386.90507)">
+          <path
+             sodipodi:nodetypes="cccccccccccccc"
+             transform="translate(0,927.36218)"
+             inkscape:connector-curvature="0"
+             id="path3257-27"
+             d="m 64.437962,624.01535 13.343783,0 0,-19.69797 20.203051,0 0,-11.42136 -20.203051,0 10.954285,-66.50956 -16.336282,-20.33628 -16.336282,20.33628 8.374496,66.50956 -20.415106,0 0,11.42136 20.415106,0 z"
+             style="fill:#666666;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             sodipodi:nodetypes="cc"
+             transform="translate(0,927.36218)"
+             inkscape:connector-curvature="0"
+             id="path4027-2"
+             d="M 71.215754,591.1854 C 70.370391,570.3107 68.989323,549.70385 70.710678,527.54579"
+             style="fill:#666666;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <g
+           style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;fill:#666666"
+           id="g4029-5-3"
+           transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-1023.8794,487.31964)">
+          <path
+             sodipodi:nodetypes="cccccccccccccc"
+             transform="translate(0,927.36218)"
+             inkscape:connector-curvature="0"
+             id="path3257-2-9"
+             d="m 64.437962,624.01535 13.343783,0 0,-19.69797 20.203051,0 0,-11.42136 -20.203051,0 10.954285,-66.50956 -16.336282,-20.33628 -16.336282,20.33628 8.374496,66.50956 -20.415106,0 0,11.42136 20.415106,0 z"
+             style="fill:#666666;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             sodipodi:nodetypes="cc"
+             transform="translate(0,927.36218)"
+             inkscape:connector-curvature="0"
+             id="path4027-3-1"
+             d="M 71.215754,591.1854 C 70.370391,570.3107 68.989323,549.70385 70.710678,527.54579"
+             style="fill:#666666;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g4083-3-9"
+       transform="matrix(0.39296246,0,0,0.39296246,-109.76321,706.81484)"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-defend-untoggled.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect4105-1-1-3"
+         width="123.23862"
+         height="101.52029"
+         x="16.162441"
+         y="1442.7861"
+         ry="19.697943" />
+      <g
+         id="g4139-5"
+         style="stroke-width:2.00019096999999979;stroke-miterlimit:4;stroke-dasharray:none;fill:none"
+         transform="translate(-0.3947017,-3.9053133)">
+        <path
+           sodipodi:nodetypes="ccccscc"
+           transform="matrix(2.5447723,0,0,2.5447723,224.33724,670.84973)"
+           inkscape:connector-curvature="0"
+           id="path4135-0"
+           d="m -74.335694,309.42857 c 5.41173,5.0968 11.012533,5.84491 16.89999,0 5.321103,3.74672 10.648688,7.41566 16.89999,0 l 0,21.46429 c 0,0 -10.466347,9.39447 -16.89999,9.3252 -6.512526,-0.0701 -16.89999,-9.80569 -16.89999,-9.80569 z"
+           style="fill:none;stroke:#000000;stroke-width:0.78600000999999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           transform="matrix(2.5447723,0,0,2.5447723,224.33724,670.84973)"
+           inkscape:connector-curvature="0"
+           id="path4137-5"
+           d="M -57.142857,315.17857 -57.321428,336.25"
+           style="fill:none;stroke:#000000;stroke-width:0.78600000999999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
     </g>
   </g>
 </svg>

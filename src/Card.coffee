@@ -22,6 +22,8 @@ window.catsvzombies.Card = class Card extends createjs.Container
     @addEventListener 'click', @clicked
     @addEventListener 'dblclick', @dblclicked
 
+    @reset_states()
+
   update: (delta) ->
 
   get_strength: ->
@@ -41,18 +43,28 @@ window.catsvzombies.Card = class Card extends createjs.Container
   dblclicked: (event) =>
     @parent?.card_dblclicked? event, @
 
+  reset_states: () =>
+    @attacking = false
+
+  is_attacking: =>
+    @attacking
+
+  toggle_attacking: =>
+    @attacking = not @attacking
+
 window.catsvzombies.CardStack = class CardStack extends createjs.Container
   @DECK = 0
   @HAND = 1
   @MANA = 2
   @PERM = 3
 
-  constructor: (@cards, @type, @callback) ->
+  constructor: (@preload, @cards, @type, @callback) ->
     @initialize()
 
     @type or= @constructor.DECK
 
     @selected = null
+    @selected_overlay = new createjs.Bitmap @preload.getResult 'active-overlay'
 
     @update()
 
@@ -77,6 +89,10 @@ window.catsvzombies.CardStack = class CardStack extends createjs.Container
         card.x = i * (card.width + 25)
         card.y = 0
         @addChild card
+        if card is @selected
+          @selected_overlay.x = card.x
+          @selected_overlay.y = card.y
+          @addChild @selected_overlay
 
 
     for c in [cards_to_add.length - 1..0]
@@ -85,7 +101,7 @@ window.catsvzombies.CardStack = class CardStack extends createjs.Container
     {width: @width, height: @height} = @getBounds() if @children.length > 0
 
   card_clicked: (event, card) ->
-    return if @type isnt @constructor.HAND
+    return if @type isnt @constructor.HAND and @type isnt @constructor.PERM
 
     if @selected isnt card
       @selected = card
@@ -94,5 +110,5 @@ window.catsvzombies.CardStack = class CardStack extends createjs.Container
 
   card_dblclicked: (event, card) ->
     return if @type isnt @constructor.HAND
-
-    @callback? @, card
+    console.log 'dblclick'
+    @callback? @parent, card

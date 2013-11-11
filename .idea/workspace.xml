@@ -5,11 +5,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Card.coffee" afterPath="$PROJECT_DIR$/src/Card.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.coffee" afterPath="$PROJECT_DIR$/src/Player.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Screen.coffee" afterPath="$PROJECT_DIR$/src/Screen.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards.svg" afterPath="$PROJECT_DIR$/art/cards.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.coffee" afterPath="$PROJECT_DIR$/src/main.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cats-vs-zombies.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384012300377" ignored="false" />
-    <file path="/index.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384048062472" ignored="false" />
+    <file path="/Dummy.txt" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384187142014" ignored="false" />
+    <file path="/index.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384182335296" ignored="false" />
     <file path="$PROJECT_DIR$/../space-domination-coffee/TODO.md" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384007509474" ignored="false" />
     <file path="$PROJECT_DIR$/../space-domination-coffee/src/main.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384007509474" ignored="false" />
     <file path="$PROJECT_DIR$/../space-domination-coffee/src/HUD.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384007509474" ignored="false" />
@@ -22,9 +26,9 @@
     <file path="/cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384029151190" ignored="false" />
     <file path="/zombie-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384031282082" ignored="false" />
     <file path="/cat-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384031310938" ignored="false" />
-    <file path="/Screen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384147379659" ignored="false" />
-    <file path="/Card.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384147197452" ignored="false" />
-    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384147189797" ignored="false" />
+    <file path="/Screen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384205679841" ignored="false" />
+    <file path="/Card.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384205517799" ignored="false" />
+    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384201298574" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +43,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -76,6 +79,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -87,37 +91,28 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="27" selection-start="576" selection-end="576" vertical-scroll-proportion="-15.692307">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="CatsVsZombiesGame.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="103" vertical-scroll-proportion="0.0">
+                <state line="28" column="10" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Player.coffee" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="Player.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Player.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="4" selection-start="842" selection-end="842" vertical-scroll-proportion="0.41319445">
+                <state line="24" column="60" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="39" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
+                <state line="22" column="64" selection-start="943" selection-end="943" vertical-scroll-proportion="0.5036145">
                   <folding />
                 </state>
               </provider>
@@ -126,7 +121,7 @@
           <file leaf-file-name="zombie-cards.json" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/zombie-cards.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="8" selection-start="365" selection-end="384" vertical-scroll-proportion="-13.076923">
+                <state line="20" column="8" selection-start="365" selection-end="384" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -135,7 +130,7 @@
           <file leaf-file-name="cat-cards.json" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/cat-cards.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="27" selection-start="546" selection-end="546" vertical-scroll-proportion="-18.307692">
+                <state line="28" column="27" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -145,19 +140,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Screen.coffee" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Screen.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Screen.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="76" column="57" selection-start="2135" selection-end="2135" vertical-scroll-proportion="0.6509009">
+                <state line="109" column="3" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Card.coffee" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="Card.coffee" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Card.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="87" column="32" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0">
+                <state line="52" column="31" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.8212617">
                   <folding />
                 </state>
               </provider>
@@ -189,11 +184,11 @@
         <option value="$PROJECT_DIR$/assets/cards.json" />
         <option value="$PROJECT_DIR$/assets/zombie-cards.json" />
         <option value="$PROJECT_DIR$/assets/cat-cards.json" />
-        <option value="$PROJECT_DIR$/src/main.coffee" />
         <option value="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/src/Card.coffee" />
         <option value="$PROJECT_DIR$/src/Player.coffee" />
+        <option value="$PROJECT_DIR$/src/main.coffee" />
+        <option value="$PROJECT_DIR$/src/Card.coffee" />
         <option value="$PROJECT_DIR$/src/Screen.coffee" />
       </list>
     </option>
@@ -201,8 +196,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
+    <option name="y" value="27" />
     <option name="width" value="1922" />
-    <option name="height" value="1081" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -230,8 +226,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,6 +288,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,8 +431,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1081" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -453,12 +449,12 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6711111" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -553,18 +549,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="62" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0389016">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="14" column="62" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0389016" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ideas">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -576,63 +566,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/zombie-cards.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="365" selection-end="384" vertical-scroll-proportion="-13.076923">
+        <state line="20" column="8" selection-start="365" selection-end="384" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/cat-cards.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="27" selection-start="546" selection-end="546" vertical-scroll-proportion="-18.307692">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="103" vertical-scroll-proportion="0.0">
+        <state line="28" column="27" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="27" selection-start="576" selection-end="576" vertical-scroll-proportion="-15.692307">
+        <state line="14" column="9" selection-start="308" selection-end="308" vertical-scroll-proportion="0.33042395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="10" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="4" selection-start="842" selection-end="842" vertical-scroll-proportion="0.41319445">
+        <state line="24" column="60" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Card.coffee">
+    <entry file="file://$PROJECT_DIR$/src/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="32" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0">
+        <state line="22" column="64" selection-start="943" selection-end="943" vertical-scroll-proportion="0.5036145">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Screen.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="57" selection-start="2135" selection-end="2135" vertical-scroll-proportion="0.6509009">
+        <state line="109" column="3" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Card.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="31" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.8212617">
           <folding />
         </state>
       </provider>

@@ -44,6 +44,8 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
     @mana_played = false
     @attacked = false
 
+    @context_menu = null
+
   show: ->
     super()
     @bgimage = new createjs.Bitmap @preload.getResult 'grassy-bg'
@@ -95,6 +97,19 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
     @opponent.x = @bgimage.x + @bgimage.image.width
     @opponent.y = @opponent.height
 
+    if @player.creatures_stack.selected?
+      @show_context_menu @player.creatures_stack.selected if @player.creatures_stack.selected isnt @last_selected
+      @last_selected = @player.creatures_stack.selected
+    else
+      @hide_context_menu()
+      @last_selected = null
+
+    if @context_menu?
+      @context_menu.update delta
+      localcoords = @context_menu.card.localToLocal(@context_menu.card.width * 0.5, @context_menu.card.height, @)
+      @context_menu.x = localcoords.x - @context_menu.getBounds()?.width * 0.5
+      @context_menu.y = localcoords.y
+
   hide: ->
     super(hide)
 
@@ -141,3 +156,56 @@ window.catsvzombies.LevelScreen = class LevelScreen extends Screen
       @start_turn @opponent
     else
       @start_turn @player
+
+  show_context_menu: (card) ->
+    @hide_context_menu()
+    switch card.proto.type
+      when 'creature'
+        @context_menu = new catsvzombies.CreatureContextMenu @preload, card
+    @addChild @context_menu
+
+  hide_context_menu: ->
+    @removeChild @context_menu if @context_menu?.parent?
+
+window.catsvzombies.CreatureContextMenu = class CreatureContextMenu extends createjs.Container
+  constructor: (@preload, @card) ->
+    @initialize()
+
+    @btn_attack = new catsvzombies.ToggleButton @preload, 'btn-attack-untoggled', 'btn-attack', card.is_attacking, card.toggle_attacking
+
+    @layout()
+
+  layout: ->
+    @removeAllChildren()
+
+    @addChild @btn_attack
+
+    {width: @width, height: @height} = @getBounds() if @children.length > 0
+
+  update: (delta) ->
+    child.update?() for child in @children
+
+window.catsvzombies.ToggleButton = class ToggleButton extends createjs.Container
+  constructor: (@preload, img_untoggled, img_toggled, @is_toggled, @toggle) ->
+    @initialize()
+
+    @untoggled = new createjs.Bitmap @preload.getResult img_untoggled
+    @toggled = new createjs.Bitmap @preload.getResult img_toggled
+
+    @addChild @untoggled
+
+    @addEventListener 'click', =>
+      @toggle()
+
+  update: (delta) ->
+    if @is_toggled() and not @was_toggled
+      @was_toggled = true
+      @removeChild @untoggled
+      @addChild @toggled
+
+    if not @is_toggled() and @was_toggled
+      @was_toggled = false
+      @addChild @untoggled
+      @removeChild @toggled
+
+    {width: @width, height: @height} = @getBounds() if @children.length > 0

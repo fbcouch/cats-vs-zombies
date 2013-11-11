@@ -19,10 +19,10 @@ window.catsvzombies.Player = class Player extends createjs.Container
     @mana_used = []
     @creatures = []
 
-    @deck_stack = new catsvzombies.CardStack @deck
-    @hand_stack = new catsvzombies.CardStack @hand, catsvzombies.CardStack.HAND, @play_card_callback
-    @discard_stack = new catsvzombies.CardStack @discard
-    @creatures_stack = new catsvzombies.CardStack @creatures, catsvzombies.CardStack.PERM
+    @deck_stack = new catsvzombies.CardStack @preload, @deck
+    @hand_stack = new catsvzombies.CardStack @preload, @hand, catsvzombies.CardStack.HAND, @play_card_callback
+    @discard_stack = new catsvzombies.CardStack @preload, @discard
+    @creatures_stack = new catsvzombies.CardStack @preload, @creatures, catsvzombies.CardStack.PERM
 
     @mana_indicator = new catsvzombies.ManaIndicator @preload, @
     @active_mana = new catsvzombies.ActiveMana @preload, @mana_active
