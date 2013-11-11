@@ -39,7 +39,7 @@ window.catsvzombies.CardStack = class CardStack extends createjs.Container
     else if @type is @constructor.PERM
       for card, i in @cards
         card.x = i * (card.width + 25)
-        card.y = 0
+        card.y = (if card.attacking or card.defending then -25 else 0)
         @addChild card
         if card is @selected
           @selected_overlay.x = card.x

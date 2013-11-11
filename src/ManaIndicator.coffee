@@ -35,6 +35,8 @@ window.catsvzombies.ManaIndicator = class ManaIndicator extends createjs.Contain
       @active[key] = 0
       @used[key] = 0
 
+    @clickable = false
+
   update: ->
     @removeAllChildren()
     for key of @totals
@@ -47,21 +49,21 @@ window.catsvzombies.ManaIndicator = class ManaIndicator extends createjs.Contain
     for key of @active
       @totals[key] = @totals[key] - @active[key] - @used[key]
 
-    y = 0
+    x = 0
     for key, val of @totals when val > 0
-      @icons[key].x = 0
-      @texts[key].x = @icons[key].image.width + 5
-      @icons[key].y = y
-      @texts[key].y = y
+      @icons[key].x = x
+      @texts[key].x = x + @icons[key].image.width + 5
+      @icons[key].y = 0
+      @texts[key].y = 0
       @texts[key].text = val
-      y += @icons[key].image.height + 10
+      x = @texts[key].x + @texts[key].getBounds().width + 10
       @addChild @icons[key]
       @addChild @texts[key]
 
     {width: @width, height: @height} = @getBounds() if @children.length > 0
 
   clicked: (key) ->
-    @active[key]++ if @totals[key] > 0
+    @active[key]++ if @totals[key] > 0 if @clickable
 
   reset_used: () ->
     @used[key] = 0 for key of @used

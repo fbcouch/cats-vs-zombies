@@ -4,7 +4,7 @@
 
 window.catsvzombies or= {}
 
-window.catsvzombies.AIPlayer = class AIPlayer extends catsvzombies.Player
+window.catsvzombies.AIPlayer = class AIPlayer extends catsvzombies.AbstractPlayer
   constructor: (@preload, @deck, @levelScreen, play_card_callback) ->
     super(@preload, @deck, @levelScreen)
 

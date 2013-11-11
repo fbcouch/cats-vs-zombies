@@ -11,6 +11,8 @@ window.catsvzombies.ActiveMana = class ActiveMana extends createjs.Container
     @icons = []
     @last = {}
 
+    @clickable = false
+
   update: ->
     # update only when dirty
     dirty = false
@@ -34,4 +36,4 @@ window.catsvzombies.ActiveMana = class ActiveMana extends createjs.Container
       {width: @width, height: @height} = @getBounds() if @children.length > 0
 
   clicked: (key) ->
-    @active_mana[key]-- if @active_mana[key] > 0
+    @active_mana[key]-- if @active_mana[key] > 0 if @clickable

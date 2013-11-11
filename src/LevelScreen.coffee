@@ -26,7 +26,6 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
 
     @opponent = new catsvzombies.AIPlayer @preload, odeck, @, @play_card_callback
 
-    @active = null
     @mana_played = false
     @attacked = false
 
@@ -40,17 +39,6 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
     @addChild @player
     @addChild @opponent
 
-    @btnPlayCard = new createjs.Bitmap @preload.getResult 'btn-play-card'
-    @btnPlayCard.addEventListener 'click', =>
-      @play_card_callback @player, @player.get_selected_card() if @current is @player and @player.get_selected_card()?
-    @addChild @btnPlayCard
-
-    @btnEndTurn = new createjs.Bitmap @preload.getResult 'btn-end-turn'
-    @btnEndTurn.addEventListener 'click', =>
-      if @current is @player
-        @end_turn()
-    @addChild @btnEndTurn
-
     @draw_card @player for i in [0...4]
     @draw_card @opponent for i in [0...4]
 
@@ -63,12 +51,6 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
 
     @player.layout(@bgimage.image.width, @height * 0.45)
     @opponent.layout(@bgimage.image.width, @height * 0.45)
-
-    @btnEndTurn.x = @bgimage.x + @bgimage.image.width - @btnEndTurn.image.width
-    @btnEndTurn.y = @height - @btnEndTurn.image.height
-
-    @btnPlayCard.x = @btnEndTurn.x
-    @btnPlayCard.y = @btnEndTurn.y - @btnPlayCard.image.height
 
   update: (delta) ->
     super(delta)

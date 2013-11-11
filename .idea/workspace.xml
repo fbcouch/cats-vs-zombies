@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76b4a27f-7646-458e-8adc-0962bd529363" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AIPlayer.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ActiveMana.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CardStack.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ContextMenu.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/LevelScreen.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ManaIndicator.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ToggleButton.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Card.coffee" afterPath="$PROJECT_DIR$/src/Card.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AIPlayer.coffee" afterPath="$PROJECT_DIR$/src/AIPlayer.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActiveMana.coffee" afterPath="$PROJECT_DIR$/src/ActiveMana.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CardStack.coffee" afterPath="$PROJECT_DIR$/src/CardStack.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LevelScreen.coffee" afterPath="$PROJECT_DIR$/src/LevelScreen.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ManaIndicator.coffee" afterPath="$PROJECT_DIR$/src/ManaIndicator.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.coffee" afterPath="$PROJECT_DIR$/src/Player.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Screen.coffee" afterPath="$PROJECT_DIR$/src/Screen.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cats-vs-zombies.iws" />
@@ -33,8 +28,13 @@
     <file path="/cat-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384031310938" ignored="false" />
     <file path="/Screen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384205679841" ignored="false" />
     <file path="/Card.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384205517799" ignored="false" />
-    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384201298574" ignored="false" />
+    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384212779231" ignored="false" />
     <file path="/LevelScreen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384209938660" ignored="false" />
+    <file path="/CardStack.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384211080732" ignored="false" />
+    <file path="/ControlledPlayer.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384211409645" ignored="false" />
+    <file path="/AIPlayer.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384211604420" ignored="false" />
+    <file path="/ActiveMana.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384211825847" ignored="false" />
+    <file path="/ManaIndicator.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384212029079" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,10 +95,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="41" selection-start="616" selection-end="616" vertical-scroll-proportion="0.54221165">
+            <state line="24" column="41" selection-start="616" selection-end="616" vertical-scroll-proportion="-16.285715">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Card.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Card.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="47" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Player.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="0" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.7520759">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActiveMana.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ActiveMana.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="18" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManaIndicator.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ManaIndicator.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="26" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AIPlayer.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AIPlayer.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="75" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,7 +161,16 @@
       <file leaf-file-name="LevelScreen.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LevelScreen.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="60" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
+            <state line="52" column="58" selection-start="1499" selection-end="1499" vertical-scroll-proportion="-3.9310346">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardStack.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CardStack.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="44" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,22 +194,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/assets/cards.json" />
         <option value="$PROJECT_DIR$/assets/zombie-cards.json" />
         <option value="$PROJECT_DIR$/assets/cat-cards.json" />
         <option value="$PROJECT_DIR$/src/main.coffee" />
         <option value="$PROJECT_DIR$/src/ContextMenu.coffee" />
         <option value="$PROJECT_DIR$/src/ToggleButton.coffee" />
         <option value="$PROJECT_DIR$/src/Screen.coffee" />
-        <option value="$PROJECT_DIR$/src/ManaIndicator.coffee" />
-        <option value="$PROJECT_DIR$/src/ActiveMana.coffee" />
-        <option value="$PROJECT_DIR$/src/Player.coffee" />
-        <option value="$PROJECT_DIR$/src/AIPlayer.coffee" />
         <option value="$PROJECT_DIR$/src/Card.coffee" />
-        <option value="$PROJECT_DIR$/src/CardStack.coffee" />
         <option value="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
-        <option value="$PROJECT_DIR$/src/LevelScreen.coffee" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/CardStack.coffee" />
+        <option value="$PROJECT_DIR$/src/ControlledPlayer.coffee" />
+        <option value="$PROJECT_DIR$/src/AIPlayer.coffee" />
+        <option value="$PROJECT_DIR$/src/ActiveMana.coffee" />
+        <option value="$PROJECT_DIR$/src/ManaIndicator.coffee" />
+        <option value="$PROJECT_DIR$/src/LevelScreen.coffee" />
+        <option value="$PROJECT_DIR$/src/Player.coffee" />
       </list>
     </option>
   </component>
@@ -398,7 +452,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -485,11 +539,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/zombie-cards.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="8" selection-start="365" selection-end="384" vertical-scroll-proportion="-13.285714">
@@ -525,44 +574,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ManaIndicator.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="0.13118526">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AIPlayer.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="88" selection-end="88" vertical-scroll-proportion="0.087456845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardStack.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="88" selection-end="88" vertical-scroll-proportion="0.087456845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Card.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="47" selection-start="321" selection-end="321" vertical-scroll-proportion="0.32796317">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="12" selection-start="102" selection-end="102" vertical-scroll-proportion="0.13118526">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Screen.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="103" selection-end="103" vertical-scroll-proportion="0.13118526">
+        <state line="15" column="47" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -574,23 +588,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActiveMana.coffee">
+    <entry file="file://$PROJECT_DIR$/src/CardStack.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="88" selection-end="88" vertical-scroll-proportion="0.087456845">
+        <state line="41" column="44" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LevelScreen.coffee">
+    <entry file="file://$PROJECT_DIR$/src/AIPlayer.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="60" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
+        <state line="6" column="75" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActiveMana.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="18" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ManaIndicator.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="26" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Screen.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="103" selection-end="103" vertical-scroll-proportion="0.13167259">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="41" selection-start="616" selection-end="616" vertical-scroll-proportion="0.54221165">
+        <state line="24" column="41" selection-start="616" selection-end="616" vertical-scroll-proportion="-16.285715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LevelScreen.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="58" selection-start="1499" selection-end="1499" vertical-scroll-proportion="-3.9310346">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.7520759">
           <folding />
         </state>
       </provider>
