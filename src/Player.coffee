@@ -79,6 +79,19 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer extends createjs.Conta
   get_selected_card: () ->
     @hand_stack.selected
 
+  discard_creature: (card) ->
+    if card in @creatures
+      card.tapped = false
+      @discard.push card
+      @creatures.splice @creatures.indexOf(card), 1
+
+  untap: ->
+    for card in @creatures
+      card.tapped = false
+      card.can_attack = true
+      card.attacking = false
+      card.defending = false
+
 window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
   constructor: (@preload, @deck, @levelScreen, @play_card_callback) ->
     super @preload, @deck, @levelScreen, @play_card_callback
@@ -88,14 +101,18 @@ window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
 
     @btnPlayCard = new createjs.Bitmap @preload.getResult 'btn-play-card'
     @btnPlayCard.addEventListener 'click', =>
-      @play_card_callback @player, @player.get_selected_card() if @get_selected_card()?
+      @play_card_callback @, @get_selected_card() if @get_selected_card()?
     @addChild @btnPlayCard
 
     @btnEndTurn = new createjs.Bitmap @preload.getResult 'btn-end-turn'
     @btnEndTurn.addEventListener 'click', =>
-      if @current is @player
-        @levelScreen.end_turn()
+      @levelScreen.end_turn @
     @addChild @btnEndTurn
+
+    @btnAttack = new createjs.Bitmap @preload.getResult 'btn-attack'
+    @btnAttack.addEventListener 'click', =>
+      @levelScreen.attack @
+    @addChild @btnAttack
 
   layout: (@width, @height) ->
     super @width, @height
@@ -105,3 +122,6 @@ window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
 
     @btnPlayCard.x = @btnEndTurn.x
     @btnPlayCard.y = @btnEndTurn.y - @btnPlayCard.image.height
+
+    @btnAttack.x = @btnEndTurn.x
+    @btnAttack.y = @btnPlayCard.y - @btnAttack.image.height

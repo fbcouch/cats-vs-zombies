@@ -18,8 +18,9 @@ manifest = [
   {id: 'btn-play-card', src: 'assets/btn-play-card.png'}
   {id: 'btn-end-turn', src: 'assets/btn-end-turn.png'}
   {id: 'btn-attack', src: 'assets/btn-attack.png'}
+  {id: 'btn-attack-toggled', src: 'assets/btn-attack-toggled.png'}
   {id: 'btn-attack-untoggled', src: 'assets/btn-attack-untoggled.png'}
-  {id: 'btn-defend', src: 'assets/btn-defend.png'}
+  {id: 'btn-defend-toggled', src: 'assets/btn-defend-toggled.png'}
   {id: 'btn-defend-untoggled', src: 'assets/btn-defend-untoggled.png'}
   {id: 'active-overlay', src: 'assets/active-overlay.png'}
 ]

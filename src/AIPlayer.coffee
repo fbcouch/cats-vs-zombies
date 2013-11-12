@@ -12,12 +12,19 @@ window.catsvzombies.AIPlayer = class AIPlayer extends catsvzombies.AbstractPlaye
 
   update: (delta, is_turn) ->
     super(delta, is_turn)
-    return if not is_turn
 
-    # TODO improve AI
+    if is_turn
 
-    @play_card_callback @, card if @parent?.can_play @, card for card in @hand
-    @mana_indicator.activate_all()
-    @play_card_callback @, card if @parent?.can_play @, card for card in @hand
+      # TODO improve AI
 
-    @parent?.end_turn()
+      @play_card_callback @, card if @parent?.can_play @, card for card in @hand
+      @mana_indicator.activate_all()
+      @play_card_callback @, card if @parent?.can_play @, card for card in @hand
+
+      @levelScreen.end_turn @
+
+    else if @levelScreen.combat_mode
+      # need to defend
+
+      card.defending = true for card in @creatures_stack.cards when not card.tapped
+      @levelScreen.defend @

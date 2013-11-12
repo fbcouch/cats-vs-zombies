@@ -10,14 +10,14 @@ window.catsvzombies.ContextMenu = class CreatureContextMenu extends createjs.Con
   constructor: (@preload, @card) ->
     @initialize()
 
-    @btn_attack = new catsvzombies.ToggleButton @preload, 'btn-attack-untoggled', 'btn-attack', card.is_attacking, card.toggle_attacking
+    @btn_attack = new catsvzombies.ToggleButton @preload, 'btn-attack-untoggled', 'btn-attack-toggled', card.is_attacking, card.toggle_attacking
 
     @layout()
 
   layout: ->
     @removeAllChildren()
 
-    @addChild @btn_attack
+    @addChild @btn_attack if @card.can_attack and not @card.tapped
 
     {width: @width, height: @height} = @getBounds() if @children.length > 0
 

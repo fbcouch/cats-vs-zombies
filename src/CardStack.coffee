@@ -22,6 +22,10 @@ window.catsvzombies.CardStack = class CardStack extends createjs.Container
 
   update: (delta) ->
     @removeAllChildren()
+
+    if @selected?.tapped
+      @selected = null
+
     cards_to_add = []
     if @type is @constructor.DECK
       c = 0
@@ -51,6 +55,8 @@ window.catsvzombies.CardStack = class CardStack extends createjs.Container
       @addChild cards_to_add[c]
 
     {width: @width, height: @height} = @getBounds() if @children.length > 0
+
+    child.update? delta for child in @children
 
   card_clicked: (event, card) ->
     return if @type isnt @constructor.HAND and @type isnt @constructor.PERM

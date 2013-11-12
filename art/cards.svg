@@ -39,7 +39,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
      inkscape:cx="-112.72485"
-     inkscape:cy="-222.14057"
+     inkscape:cy="-164.99771"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1770,7 +1770,8 @@
        id="g4111"
        inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-end-turn.png"
        inkscape:export-xdpi="181.30031"
-       inkscape:export-ydpi="181.30031">
+       inkscape:export-ydpi="181.30031"
+       transform="translate(0,6)">
       <rect
          ry="4.5456862"
          transform="translate(0,927.36218)"
@@ -1794,7 +1795,7 @@
            sodipodi:role="line">End Turn</tspan></text>
     </g>
     <g
-       transform="translate(-4.1699219e-6,-34)"
+       transform="translate(-4.1699219e-6,-28)"
        id="g4111-3"
        inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-play-card.png"
        inkscape:export-xdpi="181.30031"
@@ -1824,7 +1825,7 @@
     <g
        id="g4083"
        transform="matrix(0.39296246,0,0,0.39296246,-159.7632,664.81484)"
-       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-attack.png"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-attack-toggled.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -1881,7 +1882,7 @@
     <g
        id="g4083-3"
        transform="matrix(0.39296246,0,0,0.39296246,-109.76321,664.81484)"
-       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-defend.png"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-defend-toggled.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -2016,6 +2017,37 @@
            d="M -57.142857,315.17857 -57.321428,336.25"
            style="fill:none;stroke:#000000;stroke-width:0.78600000999999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       </g>
+    </g>
+    <g
+       transform="translate(-4.1699219e-6,-62)"
+       id="g4111-3-4"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-play-card.png"
+       inkscape:export-xdpi="181.30031"
+       inkscape:export-ydpi="181.30031">
+      <rect
+         ry="4.5456862"
+         transform="translate(0,927.36218)"
+         y="263.3909"
+         x="-150.51273"
+         height="29.294424"
+         width="87.88327"
+         id="rect4105-8-6"
+         style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-attack.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4107-9-6"
+         y="1209.4409"
+         x="-106.70781"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle"
+           y="1209.4409"
+           x="-106.70781"
+           id="tspan4109-8-3"
+           sodipodi:role="line">Attack!</tspan></text>
     </g>
   </g>
 </svg>
