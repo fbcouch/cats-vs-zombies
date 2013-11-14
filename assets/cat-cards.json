@@ -1,5 +1,6 @@
 [
     {
+        "uuid": 9003,
         "image": "card-mouse",
         "name": "Mouse",
         "type": "mana",
@@ -8,6 +9,7 @@
         }
     },
     {
+        "uuid": 9004,
         "image": "card-bird",
         "name": "Bird",
         "type": "mana",
@@ -16,6 +18,7 @@
         }
     },
     {
+        "uuid": 9005,
         "image": "card-fish",
         "name": "Fish",
         "type": "mana",
@@ -24,6 +27,7 @@
         }
     },
     {
+        "uuid": 2001,
         "image": "felix-domesticus",
         "name": "Felix Domesticus",
         "type": "creature",

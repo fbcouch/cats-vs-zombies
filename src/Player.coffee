@@ -15,7 +15,7 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
     @mana = []
     @mana_active = []
     @mana_used = []
-    console.log @field_element
+#    console.log @field_element
     @creatures = new catsvzombies.CreatureStack @, @game, @field_element.find('.creatures')
 
     @hp_indicator = new catsvzombies.HPIndicator @, @game, @element.find('.hp_indicator').eq(0)
@@ -31,6 +31,7 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
 
     @hp_indicator.update()
     @mana_indicator.update()
+    @creatures.update()
 
   activate_mana: (key) ->
     #console.log key
@@ -53,8 +54,9 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
         for key, val of card.requires
           @mana_used[key] += val
           @mana_active[key] -= val
-        @hand.splice @hand.indexOf(card), 1
-        @creatures.push card
+        if @creatures.length() < 5
+          @hand.splice @hand.indexOf(card), 1
+          @creatures.push card
     @update()
 
   start_turn: () ->

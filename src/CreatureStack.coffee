@@ -6,19 +6,31 @@ window.catsvzombies or= {}
 
 catsvzombies.CreatureStack = class CreatureStack
   constructor: (@player, @game, @element, @responsive) ->
-    @creatures = []
+    @creatures = (null for i in [0...5])
     @dirty = true
 
   update: (delta) ->
     if @dirty
-      a = 1
+      @element.find('div').each( (i, elem) =>
+        if @creatures[i]?
+          $(elem).html("<img src=\"assets/#{@creatures[i].image}.png\">")
+        else
+          $(elem).html('')
+      )
 
       @dirty = false
 
   push: (obj) ->
-    @creatures.push obj
     @dirty = true
+    for i in [0...@creatures.length]
+      if not @creatures[i]?
+        @creatures[i] = obj
+        return
 
-  pop: () ->
+  pop: (i) ->
+    return if not 0 <= i < 5
     @dirty = true
-    @creatures.pop()
+    @creatures.splice i, 1
+
+  length: () ->
+    (1 for creature in @creatures when creature?).length

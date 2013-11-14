@@ -1,5 +1,6 @@
 [
     {
+        "uuid": 9001,
         "image": "card-grave",
         "name": "Grave",
         "type": "mana",
@@ -8,6 +9,7 @@
         }
     },
     {
+        "uuid": 9002,
         "image": "card-brain",
         "name": "Brain",
         "type": "mana",
@@ -16,6 +18,7 @@
         }
     },
     {
+        "uuid": 1001,
         "image": "zombie",
         "name": "Zombie",
         "type": "creature",
