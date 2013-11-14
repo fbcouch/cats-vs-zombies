@@ -68,5 +68,4 @@ window.catsvzombies.CardStack = class CardStack extends createjs.Container
 
   card_dblclicked: (event, card) ->
     return if @type isnt @constructor.HAND
-    console.log 'dblclick'
     @callback? @parent, card

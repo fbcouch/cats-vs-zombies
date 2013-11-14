@@ -54,12 +54,20 @@ window.catsvzombies.Card = class Card extends createjs.Container
 
   reset_states: () =>
     @attacking = false
+    @defending = false
+    @tapped = false
 
   is_attacking: =>
     @attacking
 
   toggle_attacking: =>
     @attacking = not @attacking
+
+  is_defending: =>
+    @defending
+
+  toggle_defending: =>
+    @defending = not @defending
 
   played: =>
     @can_attack = false

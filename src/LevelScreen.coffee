@@ -29,6 +29,7 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
     @mana_played = false
     @attacked = false
     @combat_mode = true
+    @game_over = false
 
     @context_menu = null
 
@@ -53,10 +54,24 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
     @player.layout(@bgimage.image.width, @height * 0.45)
     @opponent.layout(@bgimage.image.width, @height * 0.45)
 
+  end_game: (victory) ->
+    @game_over = true
+    # TODO go to game over screen
+
   update: (delta) ->
     super(delta)
 
-    @player.update delta
+    if @game_over
+      @alpha -= delta
+      console.log @alpha
+      return
+
+    if @player.curhp <= 0
+      @end_game false
+    else if @opponent.curhp <= 0
+      @end_game true
+
+    @player.update delta, @current is @player
     @opponent.update delta, @current is @opponent
 
     @player.x = @bgimage.x
@@ -93,6 +108,7 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
       @play_card who, card
 
   play_card: (who, card) ->
+    return if not @can_play who, card
     who.hand.splice who.hand.indexOf(card), 1
     if card.proto.type is 'mana'
       who.mana.push card
@@ -108,7 +124,9 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
 
   can_play: (who, card) ->
     if card.proto.type is 'mana'
-      return not @mana_played
+      return (not @mana_played and who is @current)
+    else if card.proto.type is 'creature'
+      return who is @current
 
     for key, val of card.proto.requires
       return false if who.mana_active[key] < val
@@ -138,8 +156,8 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
   attack: (who) ->
     return if who isnt @current or @attacked
 
-    @attackers = (card for card in who.creatures_stack.cards when card.attacking)
-
+    @attackers = (card for card in who.creatures_stack.cards when card.attacking and not card.tapped)
+    console.log @attackers
     if @attackers.length is 0
       @attackers = []
       return
@@ -150,7 +168,7 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
   defend: (who) ->
     return if who is @current or not @combat_mode
 
-    @defenders = (card for card in who.creatures_stack.cards when card.defending)
+    @defenders = (card for card in who.creatures_stack.cards when card.defending and not card.tapped)
 
     @do_combat_round()
 
@@ -177,14 +195,12 @@ window.catsvzombies.LevelScreen = class LevelScreen extends catsvzombies.Screen
   destroy_creature: (card) ->
     @player.discard_creature card
     @opponent.discard_creature card
-    #@player.discard.push card
-
 
   show_context_menu: (card) ->
     @hide_context_menu()
     switch card.proto.type
       when 'creature'
-        @context_menu = new catsvzombies.ContextMenu @preload, card
+        @context_menu = new catsvzombies.ContextMenu @preload, card, @player, @
     @addChild @context_menu
 
   hide_context_menu: ->

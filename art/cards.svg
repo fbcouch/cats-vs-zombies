@@ -2021,7 +2021,7 @@
     <g
        transform="translate(-4.1699219e-6,-62)"
        id="g4111-3-4"
-       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-play-card.png"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-attack.png"
        inkscape:export-xdpi="181.30031"
        inkscape:export-ydpi="181.30031">
       <rect
@@ -2049,5 +2049,16 @@
            id="tspan4109-8-3"
            sodipodi:role="line">Attack!</tspan></text>
     </g>
+    <rect
+       inkscape:export-ydpi="181.30031"
+       inkscape:export-xdpi="181.30031"
+       inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/btn-generic.png"
+       style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4105-8-6-3"
+       width="87.88327"
+       height="29.294424"
+       x="-273.94165"
+       y="1137.715"
+       ry="4.5456862" />
   </g>
 </svg>

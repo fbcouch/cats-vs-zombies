@@ -42,11 +42,11 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer extends createjs.Conta
     @deck_stack.x = 0
     @deck_stack.y = @height - @deck_stack.height
 
-    @discard_stack.x = @deck_stack.x + @deck_stack.width
-    @discard_stack.y = @deck_stack.y
+    @discard_stack.x = @deck_stack.x
+    @discard_stack.y = @deck_stack.y - @deck_stack.height
 
     @hand_stack.x = (@width - @hand_stack.width) * 0.5
-    @hand_stack.y = @discard_stack.y
+    @hand_stack.y = @deck_stack.y
 
     @creatures_stack.x = (@width - @creatures_stack.width) * 0.5
     @creatures_stack.y = 0
@@ -65,11 +65,14 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer extends createjs.Conta
     @deck_stack.update delta
     @hand_stack.update delta
     @discard_stack.update delta
+    card.tapped = false for card in @discard
     @creatures_stack.update delta
     @mana_indicator.update delta
     @active_mana.update delta
 
     @layout @width, @height
+
+    child.update? delta, is_turn for child in @children
 
   draw_card: (flip) ->
     card = @deck.pop()
@@ -99,29 +102,55 @@ window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
     @mana_indicator.clickable = true
     @active_mana.clickable = true
 
-    @btnPlayCard = new createjs.Bitmap @preload.getResult 'btn-play-card'
-    @btnPlayCard.addEventListener 'click', =>
+    @btnPlayCard = new catsvzombies.TextButton @preload, 'Play Card', =>
       @play_card_callback @, @get_selected_card() if @get_selected_card()?
     @addChild @btnPlayCard
 
-    @btnEndTurn = new createjs.Bitmap @preload.getResult 'btn-end-turn'
-    @btnEndTurn.addEventListener 'click', =>
+    @btnEndTurn = new catsvzombies.TextButton @preload, 'End Turn', =>
+      console.log 'end turn'
       @levelScreen.end_turn @
     @addChild @btnEndTurn
 
-    @btnAttack = new createjs.Bitmap @preload.getResult 'btn-attack'
-    @btnAttack.addEventListener 'click', =>
+    @btnAttack = new catsvzombies.TextButton @preload, 'Attack', =>
       @levelScreen.attack @
     @addChild @btnAttack
+
+    @btnDefend = new catsvzombies.TextButton @preload, 'Defend', =>
+      @levelScreen.defend @
+    @addChild @btnDefend
 
   layout: (@width, @height) ->
     super @width, @height
 
-    @btnEndTurn.x = @width - @btnEndTurn.image.width
-    @btnEndTurn.y = @height - @btnEndTurn.image.height - 75
+    @btnEndTurn.x = @width - @btnEndTurn.width
+    @btnEndTurn.y = @height - @btnEndTurn.height - 75
 
     @btnPlayCard.x = @btnEndTurn.x
-    @btnPlayCard.y = @btnEndTurn.y - @btnPlayCard.image.height
+    @btnPlayCard.y = @btnEndTurn.y - @btnPlayCard.height
 
     @btnAttack.x = @btnEndTurn.x
-    @btnAttack.y = @btnPlayCard.y - @btnAttack.image.height
+    @btnAttack.y = @btnPlayCard.y - @btnAttack.height
+
+    @btnDefend.x = @btnAttack.x
+    @btnDefend.y = @btnAttack.y
+
+  update: (delta, is_turn) ->
+    super delta, is_turn
+
+    if is_turn
+      @addChild @btnEndTurn if @btnEndTurn.parent is null
+      if (card for card in @creatures when card.attacking).length > 0
+        @addChild @btnAttack if @btnAttack.parent is null
+      else
+        @removeChild @btnAttack
+      @removeChild @btnDefend
+    else
+      @removeChild @btnEndTurn
+      @removeChild @btnAttack
+
+      @addChild @btnDefend if @levelScreen.combat_mode and @btnDefend.parent is null
+
+    if @get_selected_card()? and @levelScreen.can_play @, @get_selected_card()
+      @addChild @btnPlayCard if @btnPlayCard.parent is null
+    else
+      @removeChild @btnPlayCard

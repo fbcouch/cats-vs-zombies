@@ -17,8 +17,10 @@ window.catsvzombies.ToggleButton = class ToggleButton extends createjs.Container
       @toggle()
 
   update: (delta) ->
+    console.log @is_toggled()
     if @is_toggled() and not @was_toggled
       @was_toggled = true
+      console.log 'toggled!'
       @removeChild @untoggled
       @addChild @toggled
 

@@ -13,9 +13,22 @@
             background-color: #000;
             color: #CCC;
         }
+        #commandCard {
+            position: absolute;
+            display: block;
+        }
+        #commandCard a {
+            background-color: #ccc;
+            color: #000;
+            border-radius: 5px;
+        }
+        .hidden {
+            display:none;
+        }
     </style>
 </head>
 <body>
+
     <canvas id="gameCanvas" style="z-index: -1"></canvas>
 
     <!-- load scripts here! -->
@@ -28,6 +41,7 @@
     <script src="out/CatsVsZombiesGame.js"></script>
     <script src="out/ContextMenu.js"></script>
     <script src="out/Screen.js"></script>
+    <script src="out/TextButton.js"></script>
     <script src="out/LevelScreen.js"></script>
     <script src="out/ManaIndicator.js"></script>
 

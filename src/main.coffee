@@ -17,6 +17,7 @@ manifest = [
   {id: 'mana-brain', src: 'assets/mana-brain.png'}
   {id: 'btn-play-card', src: 'assets/btn-play-card.png'}
   {id: 'btn-end-turn', src: 'assets/btn-end-turn.png'}
+  {id: 'btn-generic', src: 'assets/btn-generic.png'}
   {id: 'btn-attack', src: 'assets/btn-attack.png'}
   {id: 'btn-attack-toggled', src: 'assets/btn-attack-toggled.png'}
   {id: 'btn-attack-untoggled', src: 'assets/btn-attack-untoggled.png'}
