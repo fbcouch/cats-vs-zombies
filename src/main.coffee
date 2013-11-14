@@ -34,5 +34,9 @@ init = ->
   preload.loadManifest manifest
   preload.addEventListener 'complete', =>
     game = new catsvzombies.CatsVsZombiesGame()
+    start = null
+    createjs.Ticker.setFPS 20
+    createjs.Ticker.addEventListener 'tick', (event) =>
+      game.update(event.delta)
 
 init()

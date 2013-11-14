@@ -28,6 +28,15 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
     @mana_active[key]++ if @mana[key] > @mana_active[key] + @mana_used[key]
 
   play_card: (card) ->
+    switch card.type
+      when 'mana'
+        @hand.splice @hand.indexOf(card), 1
+        for key, val of card.provides
+          if @mana[key]? then @mana[key] += val else @mana[key] = val
+        @discard.push card
+#      when 'creature'
+        #
+    @update()
 
   draw_cards: (n) ->
     for i in [0...n]
@@ -43,6 +52,12 @@ window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
     @draw_cards(4)
     @hand_stack = new catsvzombies.HandIndicator @, @game, $ '.player_hand .card_stack'
 
+  update: () ->
+    super()
+    @hand_stack.update()
+
+  get_selected_card: () ->
+    @hand_stack.get_selected_card()
 
 catsvzombies.HPIndicator = class HPIndicator
   constructor: (@player, @game, @element) ->
@@ -119,3 +134,6 @@ catsvzombies.HandIndicator = class HandIndicator
     else
       @element.find('div').each( -> $(this).removeClass 'selected')
       $(elem).addClass 'selected'
+
+  get_selected_card: () ->
+    @player.hand[@element.find('div.selected').eq(0).index()]
