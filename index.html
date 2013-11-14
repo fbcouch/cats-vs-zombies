@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Cats vs Zombies - Presented by AHS Gaming (c) 2013 Jami Couch</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <style>
-        * {
+        /** {
             margin: 0;
             padding: 0;
             overflow: hidden;
+        } */
+        html {
+            height: 100%;
+            min-height: 100%;
         }
 
         body {
             background-color: #000;
             color: #CCC;
+            height: 100%;
+            min-height: 100%;
+            padding: 0 15px;
         }
+
         #commandCard {
             position: absolute;
             display: block;
@@ -25,28 +34,213 @@
         .hidden {
             display:none;
         }
+
+        .row {
+            width: 1280px;
+            height: 720px;
+            margin: auto;
+            background-image: url('./assets/grassy-bg.png');
+        }
+
+        #opponent_status {}
+
+        #player_status {}
+
+        #player_actions {
+
+        }
+
+        #player_actions p {
+
+        }
+
+        #player_actions button {
+            width: 290px;
+        }
+
+        .pull-bottom {
+            position: absolute;
+            bottom: 15px;
+        }
+
+        #statusArea {
+            background-color: rgba(200, 200, 200, 0.5);
+            height: 100%;
+            min-height: 100%;
+        }
+
+        #gameArea {
+
+            height: 100%;
+            min-height: 100%;
+        }
+
+        .hp_indicator span {
+            position: absolute;
+            left: 0;
+            text-align: center;
+            width: 100%;
+        }
+        .mana_indicator {
+            width: 100%;
+        }
+
+        .mana_indicator td {
+            text-align: center;
+        }
+
+        .mana_indicator h1 {
+            margin-top: 0;
+        }
+
+        ul.card_stack {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-left: -15px;
+            margin-bottom: -15px;
+        }
+
+        ul.card_stack li {
+            display: inline;
+            padding: 0;
+        }
+
+        ul.card_stack li:first-child {
+            margin-left: 0;
+        }
+
+        ul.card_stack li:not(:first-child) {
+            -webkit-animation-name: contract;
+               -moz-animation-name: contract;
+            -webkit-animation-duration: 0.5s;
+               -moz-animation-duration: 0.5s;
+            margin-left: -80px;
+        }
+
+        ul.card_stack:hover li:not(:first-child) {
+            -webkit-animation-name: expand;
+            -moz-animation-name: expand;
+            -webkit-animation-duration: 0.5s;
+            -moz-animation-duration: 0.5s;
+            margin-left: -10px;
+        }
+
+        @-webkit-keyframes expand {
+            from {
+                margin-left: -80px;
+            }
+            to {
+                margin-left: -10px;
+            }
+        }
+        @-moz-keyframes expand {
+            from {
+                margin-left: -80px;
+            }
+            to {
+                margin-left: -10px;
+            }
+        }
+
+        @-webkit-keyframes contract {
+            from {
+                margin-left: -10px;
+            }
+            to {
+                margin-left: -80px;
+            }
+        }
+        @-moz-keyframes contract {
+            from {
+                margin-left: -10px;
+            }
+            to {
+                margin-left: -80px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <canvas id="gameCanvas" style="z-index: -1"></canvas>
+    <div class="row">
+        <div class="col-md-3" id="statusArea">
+            <div id="opponent_status">
+                <h3>Zombies</h3>
+                <div class="progress progress-striped hp_indicator">
+                    <div class="progress-bar progress-bar-success" style=""></div>
+                    <span></span>
+                </div>
+
+                <table class="mana_indicator">
+                    <tr>
+                        <td><img src="./assets/mana-grave.png"></td>
+                        <td><img src="./assets/mana-brain.png"></td>
+                    </tr>
+                    <tr>
+                        <td><h1>0</h1></td>
+                        <td><h1>0</h1></td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div id="player_status">
+                <h3>Cats</h3>
+                <div class="progress progress-striped hp_indicator">
+                    <div class="progress-bar progress-bar-success" style=""></div>
+                    <span></span>
+                </div>
+            </div>
+            <div id="player_actions">
+
+                <table class="mana_indicator">
+                    <tr>
+                        <td><img src="./assets/mana-mouse.png"></td>
+                        <td><img src="./assets/mana-bird.png"></td>
+                        <td><img src="./assets/mana-fish.png"></td>
+                    </tr>
+                    <tr>
+                        <td><h1>0</h1></td>
+                        <td><h1>0</h1></td>
+                        <td><h1>0</h1></td>
+                    </tr>
+                </table>
+
+                <button type="button" class="pull-bottom btn btn-danger btn-lg">End Turn</button>
+            </div>
+        </div>
+        <div class="col-md-9" id="gameArea">
+            <div class="player_hand pull-bottom">
+                <ul class="card_stack">
+                    <li><img src="assets/felix-domesticus.png"></li>
+                    <li><img src="assets/felix-domesticus.png"></li>
+                    <li><img src="assets/felix-domesticus.png"></li>
+                    <li><img src="assets/felix-domesticus.png"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <!-- load scripts here! -->
-    <script src="lib/createjs-2013.09.25.min.js"></script>
-    <script src="out/ActiveMana.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!--<script src="lib/createjs-2013.09.25.min.js"></script>-->
+    <!--<script src="out/ActiveMana.js"></script>-->
     <script src="out/Player.js"></script>
     <script src="out/AIPlayer.js"></script>
-    <script src="out/Card.js"></script>
-    <script src="out/CardStack.js"></script>
+    <!--<script src="out/Card.js"></script>-->
+    <!--<script src="out/CardStack.js"></script>-->
     <script src="out/CatsVsZombiesGame.js"></script>
-    <script src="out/ContextMenu.js"></script>
-    <script src="out/Screen.js"></script>
-    <script src="out/TextButton.js"></script>
-    <script src="out/LevelScreen.js"></script>
-    <script src="out/ManaIndicator.js"></script>
+    <!--<script src="out/ContextMenu.js"></script>-->
+    <!--<script src="out/Screen.js"></script>-->
+    <!--<script src="out/TextButton.js"></script>-->
+    <!--<script src="out/LevelScreen.js"></script>-->
+    <!--<script src="out/ManaIndicator.js"></script>-->
 
 
-    <script src="out/ToggleButton.js"></script>
+    <!--<script src="out/ToggleButton.js"></script>-->
     <script src="out/main.js"></script>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

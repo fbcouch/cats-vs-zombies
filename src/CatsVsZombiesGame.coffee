@@ -7,24 +7,15 @@ window.catsvzombies or= {}
 DEBUG = false
 
 window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
+  constructor: () ->
+    @players = []
 
-  constructor: (@stage, @preload, @width, @height) ->
-    @setScreen new catsvzombies.LevelScreen @preload
+    @players.push new catsvzombies.Player @, $ "#player_status"
+    @players.push new catsvzombies.AIPlayer @, $ "#opponent_status"
 
-  update: (delta) ->
-    @screen?.update? delta
+    $('button:contains("End Turn")').click =>
+      @players[0].curhp -= 5;
+      @players[0].update();
 
-  resize: (@width, @height) ->
-    @screen?.resize @width, @height
 
-  setScreen: (screen) ->
-    if @screen?
-      @screen.hide?()
-      @stage.removeAllChildren()
-
-    @screen = screen
-    @screen.show()          # show then resize (ie: layout)
-    @resize @width, @height
-
-    @stage.addChild @screen
 
