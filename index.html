@@ -192,6 +192,35 @@
                 margin-left: 10px;
             }
         }
+
+        div.player_cards {
+            height: 50%;
+            position: relative;
+        }
+
+        div.opponent_cards {
+            height: 50%;
+            position: relative;
+        }
+
+        div.creatures {
+            display: table;
+
+        }
+
+        div.creatures div {
+            display: table-cell;
+            width: 1%;
+            margin: auto;
+            text-align: center;
+        }
+
+        img.tapped {
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+        }
+
+
     </style>
 </head>
 <body>
@@ -245,25 +274,35 @@
             </div>
 
             <div id="player_actions">
-
-
-
-
-
-
                 <div class="pull-bottom">
                     <button type="button" class="btn btn-lg half-width">Attack</button>
                     <button type="button" class="btn btn-lg half-width">Defend</button>
-
                     <button type="button" class="btn btn-lg">Play Card</button>
                     <button type="button" class="btn btn-lg">End Turn</button>
                 </div>
             </div>
         </div>
         <div class="col-md-9" id="gameArea">
+            <div class="opponent_cards">
+                <div class="creatures pull-bottom">
+                    <div><img src="./assets/zombie.png"></div>
+                    <div><img src="./assets/zombie.png"></div>
+                    <div><img src="./assets/zombie.png"></div>
+                    <div><img src="./assets/zombie.png"></div>
+                    <div><img src="./assets/zombie.png"></div>
+                </div>
+            </div>
+            <div class="player_cards">
+                <div class="creatures">
+                    <div><img class="tapped" src="./assets/felix-domesticus.png"></div>
+                    <div><img src="./assets/felix-domesticus.png"></div>
+                    <div><img src="./assets/felix-domesticus.png"></div>
+                    <div><img src="./assets/felix-domesticus.png"></div>
+                    <div><img src="./assets/felix-domesticus.png"></div>
+                </div>
+            </div>
             <div class="player_hand pull-bottom">
                 <div class="card_stack">
-
                 </div>
             </div>
         </div>
@@ -272,20 +311,14 @@
     <!-- load scripts here! -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="lib/createjs-2013.09.25.min.js"></script>
-    <!--<script src="out/ActiveMana.js"></script>-->
+    <script src="out/ActiveManaIndicator.js"></script>
     <script src="out/Player.js"></script>
     <script src="out/AIPlayer.js"></script>
-    <!--<script src="out/Card.js"></script>-->
-    <!--<script src="out/CardStack.js"></script>-->
     <script src="out/CatsVsZombiesGame.js"></script>
-    <!--<script src="out/ContextMenu.js"></script>-->
-    <!--<script src="out/Screen.js"></script>-->
-    <!--<script src="out/TextButton.js"></script>-->
-    <!--<script src="out/LevelScreen.js"></script>-->
-    <!--<script src="out/ManaIndicator.js"></script>-->
-
-
-    <!--<script src="out/ToggleButton.js"></script>-->
+    <script src="out/ManaIndicator.js"></script>
+    <script src="out/HandIndicator.js"></script>
+    <script src="out/HPIndicator.js"></script>
+    <script src="out/CreatureStack.js"></script>
     <script src="out/main.js"></script>
 
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>

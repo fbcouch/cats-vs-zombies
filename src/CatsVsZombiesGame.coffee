@@ -14,9 +14,9 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
     zombie_cards = preload.getResult 'zombie-cards'
 
     # TODO load player and zombie cards
-    @player = new catsvzombies.Player @, (cat_cards[Math.floor(Math.random() * cat_cards.length)] for i in [0...20]), $ "#player_status"
+    @player = new catsvzombies.Player @, (cat_cards[Math.floor(Math.random() * cat_cards.length)] for i in [0...20]), $("#player_status"), $( ".player_cards")
     @players.push @player
-    @players.push new catsvzombies.AIPlayer @, (zombie_cards[Math.floor(Math.random() * cat_cards.length)] for i in [0...20]), $ "#opponent_status"
+    @players.push new catsvzombies.AIPlayer @, (zombie_cards[Math.floor(Math.random() * cat_cards.length)] for i in [0...20]), $("#opponent_status"), $(".opponent_cards")
 
     $('button:contains("End Turn")').click =>
       @end_turn_clicked()
@@ -56,6 +56,7 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
       attacked: false
       combat_mode: false
 
+    @current_player().start_turn()
     console.log "Turn started for player #{i}"
 
   end_turn: () ->
@@ -71,7 +72,7 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
         return not @turn_state.mana_played
       when 'creature'
         # figure out if they have enough mana
-        return false
+        return (1 for key, val of card.requires when not who.mana_active[key]? or who.mana_active[key] < val).length is 0
     return false
 
   play_card: (who, card) ->
