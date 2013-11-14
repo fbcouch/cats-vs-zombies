@@ -33,6 +33,7 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
     @start_turn 0
 
   update: (delta) ->
+    player.update(delta) for player in @players
 
   end_turn_clicked: ->
     if @current_player() is @player
