@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76b4a27f-7646-458e-8adc-0962bd529363" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AIPlayer.coffee" afterPath="$PROJECT_DIR$/src/AIPlayer.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" afterPath="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.coffee" afterPath="$PROJECT_DIR$/src/Player.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.coffee" afterPath="$PROJECT_DIR$/src/main.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cats-vs-zombies.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384390477940" ignored="false" />
-    <file path="/index.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384445559893" ignored="false" />
+    <file path="/index.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384446473528" ignored="false" />
     <file path="$PROJECT_DIR$/../space-domination-coffee/TODO.md" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384007509474" ignored="false" />
     <file path="$PROJECT_DIR$/../space-domination-coffee/src/main.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384007509474" ignored="false" />
     <file path="$PROJECT_DIR$/../space-domination-coffee/src/HUD.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384007509474" ignored="false" />
@@ -27,7 +23,7 @@
     <file path="/cat-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384031310938" ignored="false" />
     <file path="/Screen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384205679841" ignored="false" />
     <file path="/Card.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384387508769" ignored="false" />
-    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384445633888" ignored="false" />
+    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384446444732" ignored="false" />
     <file path="/LevelScreen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384388309009" ignored="false" />
     <file path="/CardStack.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384287610988" ignored="false" />
     <file path="/ControlledPlayer.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384211409645" ignored="false" />
@@ -106,9 +102,9 @@
           <file leaf-file-name="Player.coffee" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Player.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="117" column="4" selection-start="3501" selection-end="3501" vertical-scroll-proportion="0.9409722">
+                <state line="120" column="6" selection-start="3635" selection-end="3635" vertical-scroll-proportion="0.9212963">
                   <folding>
-                    <marker date="1384445647570" expanded="true" signature="3251:3348" placeholder="..." />
+                    <marker date="1384446446381" expanded="true" signature="3257:3359" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -157,7 +153,7 @@
           <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="145" column="9" selection-start="3197" selection-end="3197" vertical-scroll-proportion="0.6647332">
+                <state line="158" column="32" selection-start="3527" selection-end="3527" vertical-scroll-proportion="0.60556847">
                   <folding />
                 </state>
               </provider>
@@ -447,7 +443,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1081" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -632,16 +628,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="4" selection-start="3501" selection-end="3501" vertical-scroll-proportion="0.9409722">
+        <state line="120" column="6" selection-start="3635" selection-end="3635" vertical-scroll-proportion="0.9212963">
           <folding>
-            <marker date="1384445647570" expanded="true" signature="3251:3348" placeholder="..." />
+            <marker date="1384446446381" expanded="true" signature="3257:3359" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="9" selection-start="3197" selection-end="3197" vertical-scroll-proportion="0.6647332">
+        <state line="158" column="32" selection-start="3527" selection-end="3527" vertical-scroll-proportion="0.60556847">
           <folding />
         </state>
       </provider>

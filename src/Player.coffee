@@ -105,13 +105,17 @@ catsvzombies.HandIndicator = class HandIndicator
 
   update: ->
     @element.html(
-      ("<img src=\"assets/#{card.image}.png\">" for card in @player.hand when card.image?).join('\n')
+      ("<div><img src=\"assets/#{card.image}.png\"></div>" for card in @player.hand when card.image?).join('\n')
     )
 
-    @element.find('img').each( (i, elem) =>
+    @element.find('div').each( (i, elem) =>
       $(elem).click =>
         @clicked elem
     )
 
   clicked: (elem) ->
-    $(elem).addClass 'selected'
+    if $(elem).hasClass 'selected'
+      $(elem).removeClass 'selected'
+    else
+      @element.find('div').each( -> $(this).removeClass 'selected')
+      $(elem).addClass 'selected'

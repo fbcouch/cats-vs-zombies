@@ -38,15 +38,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="-112.72485"
-     inkscape:cy="-164.99771"
+     inkscape:cx="44.418007"
+     inkscape:cy="-50.711996"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1440"
-     inkscape:window-height="871"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
      inkscape:window-x="1920"
-     inkscape:window-y="180"
+     inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata4399">
@@ -758,8 +758,8 @@
        transform="matrix(0.18074166,0,0,0.18074166,-107.77677,879.3975)"
        id="g6838-5-4-4"
        inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-bird.png"
-       inkscape:export-xdpi="195.20198"
-       inkscape:export-ydpi="195.20198">
+       inkscape:export-xdpi="360"
+       inkscape:export-ydpi="360">
       <path
          transform="translate(-0.53571429,930.57647)"
          d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
@@ -795,8 +795,8 @@
        transform="matrix(0.18074166,0,0,0.18074166,-108.48099,895.5714)"
        id="g6838-5-4-1-8"
        inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-fish.png"
-       inkscape:export-xdpi="195.84496"
-       inkscape:export-ydpi="195.84496">
+       inkscape:export-xdpi="361.55994"
+       inkscape:export-ydpi="361.55994">
       <path
          transform="translate(-0.53571429,930.57647)"
          d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
@@ -832,8 +832,8 @@
        transform="matrix(0.18074166,0,0,0.18074166,-108.42421,867.22016)"
        id="g6838-5-3-1"
        inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-mouse.png"
-       inkscape:export-xdpi="195.91"
-       inkscape:export-ydpi="195.91">
+       inkscape:export-xdpi="357.19049"
+       inkscape:export-ydpi="357.19049">
       <path
          transform="translate(-0.53571429,930.57647)"
          d="m 136.96429,165.89285 c 0,16.56855 -13.43146,30 -30,30 -16.568547,0 -30.000005,-13.43145 -30.000005,-30 0,-16.56854 13.431458,-30 30.000005,-30 16.56854,0 30,13.43146 30,30 z"
@@ -1393,8 +1393,8 @@
        id="g4214"
        transform="translate(-442.0031,32.072343)"
        inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-grave.png"
-       inkscape:export-xdpi="197.76413"
-       inkscape:export-ydpi="197.76413">
+       inkscape:export-xdpi="363.88599"
+       inkscape:export-ydpi="363.88599">
       <path
          sodipodi:type="arc"
          style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -1416,8 +1416,8 @@
        id="g4275"
        transform="translate(-18.435278,-2.020305)"
        inkscape:export-filename="/home/jami/Projects/web/cats-vs-zombies/assets/mana-brain.png"
-       inkscape:export-xdpi="195.914"
-       inkscape:export-ydpi="195.914">
+       inkscape:export-xdpi="359.17566"
+       inkscape:export-ydpi="359.17566">
       <path
          sodipodi:type="arc"
          style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
