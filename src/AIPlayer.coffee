@@ -5,5 +5,5 @@
 window.catsvzombies or= {}
 
 window.catsvzombies.AIPlayer = class AIPlayer extends catsvzombies.AbstractPlayer
-  constructor: (@game, @bindElement) ->
-    super @game, @bindElement
+  constructor: (@game, @hand, @bindElement) ->
+    super @game, @hand, @bindElement

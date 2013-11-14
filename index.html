@@ -10,16 +10,13 @@
             overflow: hidden;
         } */
         html {
-            height: 100%;
-            min-height: 100%;
         }
 
         body {
             background-color: #000;
             color: #CCC;
-            height: 100%;
-            min-height: 100%;
             padding: 0 15px;
+            margin-top: 10px;
         }
 
         #commandCard {
@@ -55,7 +52,13 @@
         }
 
         #player_actions button {
+            margin-top: 5px;
             width: 290px;
+        }
+
+        #player_actions button.half-width {
+            width: 143px;
+
         }
 
         .pull-bottom {
@@ -87,13 +90,29 @@
 
         .mana_indicator td {
             text-align: center;
+            padding: 0;
         }
 
         .mana_indicator h1 {
             margin-top: 0;
         }
 
-        ul.card_stack {
+        ul.mana_active {
+            list-style-type: none;
+            padding: 0;
+            margin: auto;
+            width: 100%;
+            display: table;
+        }
+
+        ul.mana_active li {
+            display: table-cell;
+            width: 1%;
+            margin: auto;
+            text-align: center;
+        }
+
+        div.card_stack {
             list-style-type: none;
             padding: 0;
             margin: 0;
@@ -101,16 +120,16 @@
             margin-bottom: -15px;
         }
 
-        ul.card_stack li {
-            display: inline;
+        div.card_stack img {
+            display: inline-block;
             padding: 0;
         }
 
-        ul.card_stack li:first-child {
+        div.card_stack img:first-child {
             margin-left: 0;
         }
 
-        ul.card_stack li:not(:first-child) {
+        div.card_stack img:not(:first-child) {
             -webkit-animation-name: contract;
                -moz-animation-name: contract;
             -webkit-animation-duration: 0.5s;
@@ -118,7 +137,7 @@
             margin-left: -80px;
         }
 
-        ul.card_stack:hover li:not(:first-child) {
+        div.card_stack:hover img:not(:first-child) {
             -webkit-animation-name: expand;
             -moz-animation-name: expand;
             -webkit-animation-duration: 0.5s;
@@ -182,6 +201,9 @@
                         <td><h1>0</h1></td>
                     </tr>
                 </table>
+                <ul class="mana_active">
+                    <li></li>
+                </ul>
             </div>
             <hr>
             <div id="player_status">
@@ -190,8 +212,6 @@
                     <div class="progress-bar progress-bar-success" style=""></div>
                     <span></span>
                 </div>
-            </div>
-            <div id="player_actions">
 
                 <table class="mana_indicator">
                     <tr>
@@ -205,25 +225,40 @@
                         <td><h1>0</h1></td>
                     </tr>
                 </table>
+            </div>
 
-                <button type="button" class="pull-bottom btn btn-danger btn-lg">End Turn</button>
+            <div id="player_actions">
+
+
+
+                <ul class="mana_active">
+                    <li><img src="./assets/mana-mouse.png"></li>
+                    <li><img src="./assets/mana-mouse.png"></li>
+                    <li><img src="./assets/mana-mouse.png"></li>
+                </ul>
+
+
+                <div class="pull-bottom">
+                    <button type="button" class="btn btn-lg half-width">Attack</button>
+                    <button type="button" class="btn btn-lg half-width">Defend</button>
+
+                    <button type="button" class="btn btn-lg">Play Card</button>
+                    <button type="button" class="btn btn-lg">End Turn</button>
+                </div>
             </div>
         </div>
         <div class="col-md-9" id="gameArea">
             <div class="player_hand pull-bottom">
-                <ul class="card_stack">
-                    <li><img src="assets/felix-domesticus.png"></li>
-                    <li><img src="assets/felix-domesticus.png"></li>
-                    <li><img src="assets/felix-domesticus.png"></li>
-                    <li><img src="assets/felix-domesticus.png"></li>
-                </ul>
+                <div class="card_stack">
+
+                </div>
             </div>
         </div>
     </div>
 
     <!-- load scripts here! -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <!--<script src="lib/createjs-2013.09.25.min.js"></script>-->
+    <script src="lib/createjs-2013.09.25.min.js"></script>
     <!--<script src="out/ActiveMana.js"></script>-->
     <script src="out/Player.js"></script>
     <script src="out/AIPlayer.js"></script>
