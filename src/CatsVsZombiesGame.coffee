@@ -66,7 +66,7 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
     @players[@turn_state.player]
 
   can_play_card: (who, card) ->
-    return false if who isnt @current_player()
+    return false if who isnt @current_player() or not card?
     switch card.type
       when 'mana'
         return not @turn_state.mana_played

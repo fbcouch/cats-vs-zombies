@@ -12,4 +12,7 @@ window.catsvzombies.AIPlayer = class AIPlayer extends catsvzombies.AbstractPlaye
     super delta
 
     if (@game.current_player() is @) # AI's turn!
+      @game.play_card @, card for card in @hand
+      @activate_mana(key) for i in [0...val] for key, val of @mana
+      @game.play_card @, card for card in @hand
       @game.end_turn()

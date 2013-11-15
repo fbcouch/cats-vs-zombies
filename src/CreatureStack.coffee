@@ -10,14 +10,37 @@ catsvzombies.CreatureStack = class CreatureStack
     @dirty = true
 
   update: (delta) ->
-    if @dirty
+    if @dirty or (@game.current_player() is @player) isnt @was_turn
       @element.find('div').each( (i, elem) =>
         if @creatures[i]?
           $(elem).html("<img src=\"assets/#{@creatures[i].image}.png\">")
+          if @creatures[i].tapped
+            $(elem).find('img').addClass('tapped')
         else
           $(elem).html('')
       )
 
+      if @responsive
+        @element.parent().find('.creature_controls > div').each (i, elem) =>
+          if @creatures[i]? and not @creatures[i].tapped
+            $(elem).find('.controls').removeClass 'hidden'
+            $(elem).find('.controls .glyphicon-arrow-left').click =>
+              @move_left i
+            $(elem).find('.controls .glyphicon-arrow-right').click =>
+              @move_right i
+
+            $(elem).find(if @game.current_player() is @player then '.controls .defend' else '.controls .attack').addClass('hidden')
+            e = $(elem).find(if @game.current_player() is @player then '.controls .attack' else '.controls .defend')
+            e.removeClass('hidden').click =>
+              if e.hasClass('toggled')
+                e.removeClass('toggled').addClass('untoggled')
+              else
+                e.removeClass('untoggled').addClass('toggled')
+
+          else
+            $(elem).find('.controls').addClass 'hidden'
+
+      @was_turn = @game.current_player() is @player
       @dirty = false
 
   push: (obj) ->
@@ -34,3 +57,17 @@ catsvzombies.CreatureStack = class CreatureStack
 
   length: () ->
     (1 for creature in @creatures when creature?).length
+
+  move_left: (i) =>
+    if @creatures[i]? and i > 0
+      save = @creatures[i - 1]
+      @creatures[i - 1] = @creatures[i]
+      @creatures[i] = save
+      @dirty = true
+
+  move_right: (i) =>
+    if @creatures[i]? and i < @creatures.length - 1
+      save = @creatures[i + 1]
+      @creatures[i + 1] = @creatures[i]
+      @creatures[i] = save
+      @dirty = true

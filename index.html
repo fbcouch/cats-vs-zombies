@@ -221,6 +221,37 @@
             -webkit-transform: rotate(90deg);
         }
 
+        div.creature_controls {
+            display: table;
+            width: 100%;
+        }
+
+        div.creature_controls > div {
+            display: table-cell;
+            width: 20%;
+            margin: auto;
+            text-align: center;
+        }
+
+        div.creature_controls div.attack,
+        div.creature_controls div.defend {
+            display: inline-block;
+        }
+
+        div.creature_controls div.attack.toggled img.toggled,
+        div.creature_controls div.attack.untoggled img.untoggled,
+        div.creature_controls div.defend.toggled img.toggled,
+        div.creature_controls div.defend.untoggled img.untoggled {
+            display: inline-block;
+        }
+
+        div.creature_controls div.attack.toggled img.untoggled,
+        div.creature_controls div.attack.untoggled img.toggled,
+        div.creature_controls div.defend.toggled img.untoggled,
+        div.creature_controls div.defend.untoggled img.toggled {
+            display: none;
+        }
+
 
     </style>
 </head>
@@ -295,11 +326,83 @@
             </div>
             <div class="player_cards">
                 <div class="creatures">
-                    <div><img class="tapped" src="./assets/felix-domesticus.png"></div>
                     <div><img src="./assets/felix-domesticus.png"></div>
                     <div><img src="./assets/felix-domesticus.png"></div>
                     <div><img src="./assets/felix-domesticus.png"></div>
                     <div><img src="./assets/felix-domesticus.png"></div>
+                    <div><img src="./assets/felix-domesticus.png"></div>
+                </div>
+                <div class="creature_controls">
+                    <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left disabled"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right"> </button>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right"> </button>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right"> </button>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right"> </button>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right disabled"> </button>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="player_hand pull-bottom">

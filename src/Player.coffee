@@ -57,7 +57,7 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
         if @creatures.length() < 5
           @hand.splice @hand.indexOf(card), 1
           @creatures.push card
-    @update()
+
 
   start_turn: () ->
     @cards.push card for card in @hand
@@ -83,6 +83,8 @@ window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
     @mana_active_indicator = new catsvzombies.ActiveManaIndicator @, @game, @element.find('.mana_active')
 
     @hand_stack = new catsvzombies.HandIndicator @, @game, $ '.player_hand .card_stack'
+
+    @creatures = new catsvzombies.CreatureStack @, @game, @field_element.find('.creatures'), true
 
   update: () ->
     super()
