@@ -14,9 +14,9 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
     zombie_cards = preload.getResult 'zombie-cards'
 
     # TODO load player and zombie cards
-    @player = new catsvzombies.Player @, (cat_cards[Math.floor(Math.random() * cat_cards.length)] for i in [0...20]), $("#player_status"), $( ".player_cards")
+    @player = new catsvzombies.Player @, (JSON.parse(JSON.stringify(cat_cards[Math.floor(Math.random() * cat_cards.length)])) for i in [0...20]), $("#player_status"), $( ".player_cards")
     @players.push @player
-    @players.push new catsvzombies.AIPlayer @, (zombie_cards[Math.floor(Math.random() * cat_cards.length)] for i in [0...20]), $("#opponent_status"), $(".opponent_cards")
+    @players.push new catsvzombies.AIPlayer @, (JSON.parse(JSON.stringify(zombie_cards[Math.floor(Math.random() * zombie_cards.length)])) for i in [0...20]), $("#opponent_status"), $(".opponent_cards")
 
     $('button:contains("End Turn")').click =>
       @end_turn_clicked()
@@ -46,8 +46,12 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
       @play_card @player, card
 
   attack_clicked: ->
+    if @current_player() is @player
+      @attack @player
 
   defend_clicked: ->
+    if @current_player() isnt @player and @turn_state.combat_mode
+      @defend @player
 
   start_turn: (i) ->
     @turn_state =
@@ -80,4 +84,45 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
     @turn_state.mana_played = true if card.type is 'mana'
     who.play_card card
 
+  attack: (who) ->
+    return if who isnt @current_player() or @turn_state.attacked
 
+    attackers = who.get_attackers()
+    return if (1 for a in attackers when a?).length is 0
+
+    @turn_state.attackers = attackers
+
+    @turn_state.combat_mode = true
+
+    console.log "Player #{@players.indexOf(who)} attacks"
+
+  defend: (who) ->
+    return if who is @current_player() or not @turn_state.combat_mode
+
+    @turn_state.defenders = who.get_defenders()
+
+    console.log "Player #{@players.indexOf(who)} defends"
+
+    @do_combat()
+
+  do_combat: ->
+    console.log 'combat'
+    @turn_state.combat_mode = false
+
+    console.log @turn_state
+    attacker = @current_player()
+    defender = @players[(@turn_state.player + 1) % @players.length]
+
+    for i in [0...@turn_state.attackers.length]
+      if @turn_state.attackers[i]?
+        a = @turn_state.attackers[i]
+        # something needs to happen
+        if @turn_state.defenders[i]?
+          d = @turn_state.defenders[i]
+          defender.discard_creature d if a.strength >= d.toughness
+          attacker.discard_creature a if d.strength >= a.toughness
+          d.tapped = true
+        else
+          # hit the opposing player
+          defender.curhp -= a.strength
+        a.tapped = true

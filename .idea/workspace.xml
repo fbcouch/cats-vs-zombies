@@ -6,7 +6,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" afterPath="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CreatureStack.coffee" afterPath="$PROJECT_DIR$/src/CreatureStack.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.coffee" afterPath="$PROJECT_DIR$/src/Player.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cats-vs-zombies.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,17 +20,17 @@
     <file path="/main.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384466416641" ignored="false" />
     <file path="/Gruntfile.js" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384008445807" ignored="false" />
     <file path="/.gitignore" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384009001868" ignored="false" />
-    <file path="/CatsVsZombiesGame.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384489420946" ignored="false" />
+    <file path="/CatsVsZombiesGame.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384495290397" ignored="false" />
     <file path="/cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384029151190" ignored="false" />
     <file path="/zombie-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384473122606" ignored="false" />
     <file path="/cat-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384031310938" ignored="false" />
     <file path="/Screen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384205679841" ignored="false" />
     <file path="/Card.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384387508769" ignored="false" />
-    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384490945781" ignored="false" />
+    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384494850327" ignored="false" />
     <file path="/LevelScreen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384388309009" ignored="false" />
     <file path="/CardStack.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384287610988" ignored="false" />
     <file path="/ControlledPlayer.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384211409645" ignored="false" />
-    <file path="/AIPlayer.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384489337020" ignored="false" />
+    <file path="/AIPlayer.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384493639362" ignored="false" />
     <file path="/ActiveMana.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384211825847" ignored="false" />
     <file path="/ManaIndicator.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384212029079" ignored="false" />
     <file path="/ContextMenu.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384388130428" ignored="false" />
@@ -41,7 +41,7 @@
     <file path="$PROJECT_DIR$/../../nextgxdx/dp-rules/lab-sites/BARNEMOL.js" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384439541505" ignored="false" />
     <file path="/BARNEMOL.js" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384439531313" ignored="false" />
     <file path="/ActiveManaIndicator.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384470796576" ignored="false" />
-    <file path="/CreatureStack.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384492196828" ignored="false" />
+    <file path="/CreatureStack.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384494887529" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,7 @@
       <file leaf-file-name="CreatureStack.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CreatureStack.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="49" selection-start="575" selection-end="575" vertical-scroll-proportion="0.3207547">
+            <state line="57" column="21" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.7358491">
               <folding />
             </state>
           </provider>
@@ -141,7 +141,7 @@
       <file leaf-file-name="Player.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="97" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.0">
+            <state line="80" column="23" selection-start="2251" selection-end="2251" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -150,7 +150,7 @@
       <file leaf-file-name="CatsVsZombiesGame.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="59" selection-start="1796" selection-end="1796" vertical-scroll-proportion="0.0">
+            <state line="16" column="125" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -159,7 +159,7 @@
       <file leaf-file-name="AIPlayer.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AIPlayer.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+            <state line="25" column="93" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,10 +194,10 @@
         <option value="$PROJECT_DIR$/src/ActiveManaIndicator.coffee" />
         <option value="$PROJECT_DIR$/assets/zombie-cards.json" />
         <option value="$PROJECT_DIR$/assets/cat-cards.json" />
-        <option value="$PROJECT_DIR$/src/AIPlayer.coffee" />
-        <option value="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
-        <option value="$PROJECT_DIR$/src/Player.coffee" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/AIPlayer.coffee" />
+        <option value="$PROJECT_DIR$/src/Player.coffee" />
+        <option value="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
         <option value="$PROJECT_DIR$/src/CreatureStack.coffee" />
       </list>
     </option>
@@ -448,7 +448,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1081" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -606,13 +606,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="97" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="398" column="47" selection-start="13303" selection-end="13303" vertical-scroll-proportion="-23.192308">
@@ -620,23 +613,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
+    <entry file="file://$PROJECT_DIR$/src/AIPlayer.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="59" selection-start="1796" selection-end="1796" vertical-scroll-proportion="0.0">
+        <state line="25" column="93" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AIPlayer.coffee">
+    <entry file="file://$PROJECT_DIR$/src/Player.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+        <state line="80" column="23" selection-start="2251" selection-end="2251" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="125" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CreatureStack.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="49" selection-start="575" selection-end="575" vertical-scroll-proportion="0.3207547">
+        <state line="57" column="21" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.7358491">
           <folding />
         </state>
       </provider>

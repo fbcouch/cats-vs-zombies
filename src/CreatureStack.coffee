@@ -10,12 +10,15 @@ catsvzombies.CreatureStack = class CreatureStack
     @dirty = true
 
   update: (delta) ->
+    # TODO need to check tapped vs untapped
     if @dirty or (@game.current_player() is @player) isnt @was_turn
       @element.find('div').each( (i, elem) =>
         if @creatures[i]?
           $(elem).html("<img src=\"assets/#{@creatures[i].image}.png\">")
           if @creatures[i].tapped
             $(elem).find('img').addClass('tapped')
+          else
+            $(elem).find('img').removeClass('tapped')
         else
           $(elem).html('')
       )
@@ -53,7 +56,14 @@ catsvzombies.CreatureStack = class CreatureStack
   pop: (i) ->
     return if not 0 <= i < 5
     @dirty = true
-    @creatures.splice i, 1
+    creature = @creatures[i]
+    @creatures[i] = null
+    creature
+
+  remove: (card) ->
+    for creature, i in @creatures
+      @creatures[i] = null if creature is card
+    @dirty = true
 
   length: () ->
     (1 for creature in @creatures when creature?).length
@@ -71,3 +81,14 @@ catsvzombies.CreatureStack = class CreatureStack
       @creatures[i + 1] = @creatures[i]
       @creatures[i] = save
       @dirty = true
+
+  get_attackers: () ->
+    for i in [0...@creatures.length]
+      @creatures[i] if @creatures[i]? and not @creatures[i].tapped and @is_toggled('attack', i)
+
+  get_defenders: () ->
+    for i in [0...@creatures.length]
+      @creatures[i] if @creatures[i]? and not @creatures[i].tapped and @is_attack_toggled('defend', i)
+
+  is_toggled: (classname, i) ->
+    @element.parent().find(".creature_controls > div .controls .#{classname}").eq(i).hasClass('toggled')

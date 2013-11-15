@@ -61,6 +61,7 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
 
   start_turn: () ->
     @cards.push card for card in @hand
+    creature?.tapped = false for creature in @creatures.creatures
     @hand = []
     @reset_mana()
     @draw_cards(4)
@@ -73,6 +74,17 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
     for key of @mana
       @mana_active[key] = 0
       @mana_used[key] = 0
+
+  discard_creature: (card) ->
+    @creatures.remove card
+    @discard.push card
+    card.tapped = false
+
+  get_attackers: () ->
+    # implement this in subclass
+
+  get_defenders: () ->
+    # implement this in subclass
 
 
 window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
@@ -93,3 +105,6 @@ window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
 
   get_selected_card: () ->
     @hand_stack.get_selected_card()
+
+  get_attackers: () ->
+    @creatures.get_attackers()
