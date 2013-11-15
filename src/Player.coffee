@@ -16,7 +16,7 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
     @mana_active = []
     @mana_used = []
 #    console.log @field_element
-#    @creatures = new catsvzombies.CreatureStack @, @game, @field_element.find('.creatures')
+    @creatures = new catsvzombies.CreatureStack @, @game, @field_element.find('.creatures')
 
     @hp_indicator = new catsvzombies.HPIndicator @, @game, @element.find('.hp_indicator').eq(0)
     @mana_indicator = new catsvzombies.ManaIndicator @, @game, @element.find('.mana_indicator').eq(0)

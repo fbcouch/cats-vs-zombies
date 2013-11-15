@@ -17,30 +17,36 @@ catsvzombies.CreatureStack = class CreatureStack
           @move_right i
 
         $(elem).find('.controls .attack').click ->
-          console.log 'ding'
           if $(this).hasClass('toggled')
             $(this).removeClass('toggled').addClass('untoggled')
           else
             $(this).removeClass('untoggled').addClass('toggled')
 
         $(elem).find('.controls .defend').click ->
-          console.log 'ding'
           if $(this).hasClass('toggled')
             $(this).removeClass('toggled').addClass('untoggled')
           else
             $(this).removeClass('untoggled').addClass('toggled')
 
   update: (delta) ->
-    # TODO need to check tapped vs untapped
 
     if @dirty
       @element.find('div').each( (i, elem) =>
         if @creatures[i]?
-          $(elem).html("<img src=\"assets/#{@creatures[i].image}.png\">")
+          $(elem).html("<img src=\"assets/#{@creatures[i].image}.png\"><span class=\"status-icon\"></span>")
         else
           $(elem).html('')
       )
       @dirty = false
+
+    if not @responsive
+      if @game.turn_state.combat_mode is true
+        for i of @creatures
+          if @creatures[i] in @game.turn_state.attackers
+            @element.find('div').eq(i).find('span.status-icon').addClass('icon-attack')
+      else
+        @element.find('div span.status-icon').removeClass('icon-attack')
+
 
     @element.find('div').each (i, elem) =>
       if @creatures[i]?

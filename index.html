@@ -214,6 +214,7 @@
             width: 20%;
             margin: auto;
             text-align: center;
+            position: relative;
         }
 
         img.tapped {
@@ -252,6 +253,39 @@
             display: none;
         }
 
+        .status-icon {
+            z-index: 10;
+            position: absolute;
+            text-align: center;
+            background: #ccc;
+            padding: 10px 15px;
+            border-radius: 5px;
+            top: -50px;
+            left: 63px;
+            width: 60px;
+            height: 45px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px 1px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: none;
+        }
+
+        .status-icon:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-style: solid;
+            border-color: #ccc transparent transparent transparent;
+            top: 100%;
+            left: 20px;
+        }
+
+        .status-icon.icon-attack {
+            background-image: url('./assets/icon-attack.png');
+            display: inline;
+        }
 
     </style>
 </head>
@@ -318,7 +352,7 @@
             <div class="opponent_cards">
                 <div class="creatures pull-bottom">
                     <div><img src="./assets/zombie.png"></div>
-                    <div><img src="./assets/zombie.png"></div>
+                    <div><img src="./assets/zombie.png"><span class="status-icon icon-attack"></span></div>
                     <div><img src="./assets/zombie.png"></div>
                     <div><img src="./assets/zombie.png"></div>
                     <div><img src="./assets/zombie.png"></div>
