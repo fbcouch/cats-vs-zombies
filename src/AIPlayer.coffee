@@ -5,8 +5,8 @@
 window.catsvzombies or= {}
 
 window.catsvzombies.AIPlayer = class AIPlayer extends catsvzombies.AbstractPlayer
-  constructor: (@game, @hand, @bindElement, @fieldElement) ->
-    super @game, @hand, @bindElement, @fieldElement
+  constructor: (@game, @cards, @bindElement, @fieldElement) ->
+    super @game, @cards, @bindElement, @fieldElement
 
   update: (delta) ->
     super delta
@@ -14,13 +14,30 @@ window.catsvzombies.AIPlayer = class AIPlayer extends catsvzombies.AbstractPlaye
     if (@game.current_player() is @) # AI's turn!
       @game.play_card @, card for card in @hand
       @activate_mana(key) for i in [0...val] for key, val of @mana
-      @game.play_card @, card for card in @hand
-      @game.end_turn()
+      for card in @hand
+        if @game.can_play_card @, card
+          p = Math.random()
+          if p < 0.5
+            @game.play_card @, card
+          else
+#            console.log 'AI: failed roll ' + p
+      @game.attack @ if not @game.turn_state.combat_mode
+      if not @game.turn_state.combat_mode
+        @game.end_turn()
     else if @game.turn_state.combat_mode # need to defend
       @game.defend @
 
   get_attackers: ->
-    (if not creature?.tapped then creature else null) for i, creature of @creatures.creatures
+    for i, creature of @creatures.creatures
+      if not creature?.tapped
+        p = Math.random()
+        if p < 0.5
+          creature
+        else
+#          console.log 'AI: failed roll ' + p
+          null
+      else
+        null
 
   get_defenders: ->
     (if not creature?.tapped then creature else null) for i, creature of @creatures.creatures

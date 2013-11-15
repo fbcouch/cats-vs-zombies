@@ -14,9 +14,10 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
     zombie_cards = preload.getResult 'zombie-cards'
 
     # TODO load player and zombie cards
-    @player = new catsvzombies.Player @, (JSON.parse(JSON.stringify(cat_cards[Math.floor(Math.random() * cat_cards.length)])) for i in [0...20]), $("#player_status"), $( ".player_cards")
+
+    @player = new catsvzombies.Player @, (@create_card cat_cards[Math.floor(Math.random() * cat_cards.length)] for i in [0...20]), $("#player_status"), $( ".player_cards")
     @players.push @player
-    @players.push new catsvzombies.AIPlayer @, (JSON.parse(JSON.stringify(zombie_cards[Math.floor(Math.random() * zombie_cards.length)])) for i in [0...20]), $("#opponent_status"), $(".opponent_cards")
+    @players.push new catsvzombies.AIPlayer @, (@create_card zombie_cards[Math.floor(Math.random() * zombie_cards.length)] for i in [0...20]), $("#opponent_status"), $(".opponent_cards")
 
     $('button:contains("End Turn")').click =>
       @end_turn_clicked()
@@ -31,6 +32,14 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
       @defend_clicked()
 
     @start_turn 0
+
+  create_card: (card) ->
+    c = JSON.parse JSON.stringify card
+    c.uuid =
+      (for j in [0...12]
+        p = Math.random() * 36
+        String.fromCharCode(if p < 10 then p + 48 else p + 55) ).join('')
+    c
 
   update: (delta) ->
     player.update(delta) for player in @players
@@ -93,6 +102,7 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
     @turn_state.attackers = attackers
 
     @turn_state.combat_mode = true
+    @turn_state.attacked = true
 
     console.log "Player #{@players.indexOf(who)} attacks"
 

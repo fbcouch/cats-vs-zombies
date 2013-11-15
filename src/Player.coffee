@@ -108,3 +108,10 @@ window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
 
   get_attackers: () ->
     @creatures.get_attackers()
+
+  get_defenders: () ->
+    @creatures.get_defenders()
+
+  start_turn: () ->
+    super()
+    @creatures.reset_controls()

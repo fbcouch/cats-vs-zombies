@@ -9,42 +9,61 @@ catsvzombies.CreatureStack = class CreatureStack
     @creatures = (null for i in [0...5])
     @dirty = true
 
+    if @responsive
+      @element.parent().find('.creature_controls > div').each (i, elem) =>
+        $(elem).find('.controls .glyphicon-arrow-left').click =>
+          @move_left i
+        $(elem).find('.controls .glyphicon-arrow-right').click =>
+          @move_right i
+
+        $(elem).find('.controls .attack').click ->
+          console.log 'ding'
+          if $(this).hasClass('toggled')
+            $(this).removeClass('toggled').addClass('untoggled')
+          else
+            $(this).removeClass('untoggled').addClass('toggled')
+
+        $(elem).find('.controls .defend').click ->
+          console.log 'ding'
+          if $(this).hasClass('toggled')
+            $(this).removeClass('toggled').addClass('untoggled')
+          else
+            $(this).removeClass('untoggled').addClass('toggled')
+
   update: (delta) ->
     # TODO need to check tapped vs untapped
-    if @dirty or (@game.current_player() is @player) isnt @was_turn
+
+    if @dirty
       @element.find('div').each( (i, elem) =>
         if @creatures[i]?
           $(elem).html("<img src=\"assets/#{@creatures[i].image}.png\">")
-          if @creatures[i].tapped
-            $(elem).find('img').addClass('tapped')
-          else
-            $(elem).find('img').removeClass('tapped')
         else
           $(elem).html('')
       )
-
-      if @responsive
-        @element.parent().find('.creature_controls > div').each (i, elem) =>
-          if @creatures[i]? and not @creatures[i].tapped
-            $(elem).find('.controls').removeClass 'hidden'
-            $(elem).find('.controls .glyphicon-arrow-left').click =>
-              @move_left i
-            $(elem).find('.controls .glyphicon-arrow-right').click =>
-              @move_right i
-
-            $(elem).find(if @game.current_player() is @player then '.controls .defend' else '.controls .attack').addClass('hidden')
-            e = $(elem).find(if @game.current_player() is @player then '.controls .attack' else '.controls .defend')
-            e.removeClass('hidden').click =>
-              if e.hasClass('toggled')
-                e.removeClass('toggled').addClass('untoggled')
-              else
-                e.removeClass('untoggled').addClass('toggled')
-
-          else
-            $(elem).find('.controls').addClass 'hidden'
-
-      @was_turn = @game.current_player() is @player
       @dirty = false
+
+    @element.find('div').each (i, elem) =>
+      if @creatures[i]?
+        if @creatures[i].tapped
+          $(elem).find('img').addClass('tapped')
+        else
+          $(elem).find('img').removeClass('tapped')
+    if @responsive
+      @element.parent().find('.creature_controls > div').each (i, elem) =>
+        if @creatures[i]? and not @creatures[i].tapped
+          $(elem).find('.controls').removeClass 'hidden' if $(elem).find('.controls').hasClass 'hidden'
+
+#          if (@game.current_player() is @player) isnt @was_turn
+          inactive = if @game.current_player() is @player then '.controls .defend' else '.controls .attack'
+          active = if @game.current_player() is @player then '.controls .attack' else '.controls .defend'
+          $(elem).find(inactive).addClass('hidden') if not $(elem).find(inactive).hasClass('hidden')
+          e = $(elem).find(active)
+          e.removeClass('hidden') if e.hasClass('hidden')
+
+        else
+          $(elem).find('.controls').addClass 'hidden'
+    @was_turn = @game.current_player() is @player
+
 
   push: (obj) ->
     @dirty = true
@@ -88,7 +107,14 @@ catsvzombies.CreatureStack = class CreatureStack
 
   get_defenders: () ->
     for i in [0...@creatures.length]
-      @creatures[i] if @creatures[i]? and not @creatures[i].tapped and @is_attack_toggled('defend', i)
+      @creatures[i] if @creatures[i]? and not @creatures[i].tapped and @is_toggled('defend', i)
 
   is_toggled: (classname, i) ->
     @element.parent().find(".creature_controls > div .controls .#{classname}").eq(i).hasClass('toggled')
+
+  reset_controls: ->
+    @element.parent().find('.creature_controls > div .controls .attack').each ->
+      $(this).removeClass('toggled').addClass('untoggled')
+
+    @element.parent().find('.creature_controls > div .controls .defend').each ->
+      $(this).removeClass('toggled').addClass('untoggled')
