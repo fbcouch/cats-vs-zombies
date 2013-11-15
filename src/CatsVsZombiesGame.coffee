@@ -19,16 +19,22 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
     @players.push @player
     @players.push new catsvzombies.AIPlayer @, (@create_card zombie_cards[Math.floor(Math.random() * zombie_cards.length)] for i in [0...20]), $("#opponent_status"), $(".opponent_cards")
 
-    $('button:contains("End Turn")').click =>
+    @command_card =
+      end_turn: $('button:contains("End Turn")')
+      play_card: $('button:contains("Play Card")')
+      attack: $('button:contains("Attack")')
+      defend: $('button:contains("Defend")')
+
+    @command_card.end_turn.click =>
       @end_turn_clicked()
 
-    $('button:contains("Play Card")').click =>
+    @command_card.play_card.click =>
       @play_card_clicked()
 
-    $('button:contains("Attack")').click =>
+    @command_card.attack.click =>
       @attack_clicked()
 
-    $('button:contains("Defend")').click =>
+    @command_card.defend.click =>
       @defend_clicked()
 
     @start_turn 0
@@ -43,6 +49,27 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
 
   update: (delta) ->
     player.update(delta) for player in @players
+
+    # command card
+    if @current_player() is @player
+      @command_card.defend.removeClass('btn-primary') if @command_card.defend.hasClass('btn-primary')
+      @command_card.end_turn.addClass('btn-primary') if not @command_card.end_turn.hasClass('btn-primary')
+      if not @turn_state.attacked and not @turn_state.combat_mode
+        @command_card.attack.addClass('btn-primary') if not @command_card.attack.hasClass('btn-primary')
+      else
+        @command_card.attack.removeClass('btn-primary') if @command_card.attack.hasClass('btn-primary')
+    else
+      @command_card.end_turn.removeClass('btn-primary') if @command_card.end_turn.hasClass('btn-primary')
+      @command_card.attack.removeClass('btn-primary') if @command_card.attack.hasClass('btn-primary')
+      if @turn_state.combat_mode
+        @command_card.defend.addClass('btn-primary') if not @command_card.defend.hasClass('btn-primary')
+      else
+        @command_card.defend.removeClass('btn-primary') if @command_card.defend.hasClass('btn-primary')
+
+    if @player.get_selected_card() and @can_play_card @player, @player.get_selected_card()
+      @command_card.play_card.addClass('btn-primary') if not @command_card.play_card.hasClass('btn-primary')
+    else
+      @command_card.play_card.removeClass('btn-primary') if @command_card.play_card.hasClass('btn-primary')
 
   end_turn_clicked: ->
     if @current_player() is @player
