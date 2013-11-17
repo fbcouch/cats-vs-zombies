@@ -9,6 +9,7 @@ game = null
 manifest = [
   {id: 'cat-cards', src: 'assets/cat-cards.json'}
   {id: 'zombie-cards', src: 'assets/zombie-cards.json'}
+  {id: 'decks', src: 'assets/decks.json'}
 #  {id: 'grassy-bg', src: 'assets/grassy-bg.png'}
 #  {id: 'card-back', src: 'assets/card-back.png'}
 #  {id: 'mana-mouse', src: 'assets/mana-mouse.png'}

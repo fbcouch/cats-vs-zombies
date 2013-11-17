@@ -12,12 +12,19 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
 
     cat_cards = preload.getResult 'cat-cards'
     zombie_cards = preload.getResult 'zombie-cards'
+    decks = preload.getResult 'decks'
+    # Player (starter) deck
 
-    # TODO load player and zombie cards
+    player_cards = []
+    player_cards.push card for card in cat_cards when card.uuid is id for id in decks['default'].cards
 
-    @player = new catsvzombies.Player @, (@create_card cat_cards[Math.floor(Math.random() * cat_cards.length)] for i in [0...20]), $("#player_status"), $( ".player_cards")
+    ai_cards = []
+    ai_cards.push card for card in zombie_cards when card.uuid is id for id in decks['newb-zombie'].cards
+
+    console.log player_cards
+    @player = new catsvzombies.Player @, (@create_card card for card in player_cards), $("#player_status"), $( ".player_cards")
     @players.push @player
-    @players.push new catsvzombies.AIPlayer @, (@create_card zombie_cards[Math.floor(Math.random() * zombie_cards.length)] for i in [0...20]), $("#opponent_status"), $(".opponent_cards")
+    @players.push new catsvzombies.AIPlayer @, (@create_card card for card in ai_cards), $("#opponent_status"), $(".opponent_cards")
 
     @command_card =
       end_turn: $('button:contains("End Turn")')

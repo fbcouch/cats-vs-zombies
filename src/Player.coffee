@@ -67,7 +67,7 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
     @draw_cards(4)
 
   draw_cards: (n) ->
-    for i in [0...n]
+    for i in [0...Math.min(n, @cards.length)]
       @hand.push @cards.splice(Math.floor(Math.random() * @cards.length), 1)[0]
 
   reset_mana: () ->

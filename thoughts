@@ -1,0 +1,14 @@
+use gjapi to store user data:
+ - world (randomly generated?)
+ - current deck, all cards
+ - stats?
+ 
+think about logging all games so that they could be reconstructed/mined
+
+to acheive different screens:
+- use jQuery ajax to load template files
+	- battle screen (what I have now)
+	- world screen
+	- deck builder screen
+	
+multiplayer mode?
