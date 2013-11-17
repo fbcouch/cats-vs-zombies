@@ -4,12 +4,14 @@
 
 window.catsvzombies or= {}
 
-game = null
+screen = null
+player = null
 
 manifest = [
   {id: 'cat-cards', src: 'assets/cat-cards.json'}
   {id: 'zombie-cards', src: 'assets/zombie-cards.json'}
   {id: 'decks', src: 'assets/decks.json'}
+  {id: 'missions', src: 'assets/missions.json'}
 #  {id: 'grassy-bg', src: 'assets/grassy-bg.png'}
 #  {id: 'card-back', src: 'assets/card-back.png'}
 #  {id: 'mana-mouse', src: 'assets/mana-mouse.png'}
@@ -34,10 +36,49 @@ init = ->
 
   preload.loadManifest manifest
   preload.addEventListener 'complete', =>
-    game = new catsvzombies.CatsVsZombiesGame()
-    start = null
-    createjs.Ticker.setFPS 20
-    createjs.Ticker.addEventListener 'tick', (event) =>
-      game.update(event.delta)
+    loadScreenTemplate './intro.html', =>
+      screen = new catsvzombies.Intro()
+      createjs.Ticker.setFPS 20
+      createjs.Ticker.addEventListener 'tick', (event) =>
+        screen.update?(event.delta)
+#    loadScreenTemplate './battleScreen.html', =>
+#      player =
+#        missions: preload.getResult 'missions'
+#      game = new catsvzombies.CatsVsZombiesGame()
+
+#    loadScreenTemplate './overworld.html', =>
+#      overworld = new catsvzombies.Overworld()
+
+window.loadScreenTemplate = (url, callback) ->
+  $.ajax(url).done (data) =>
+    $('#game').html(data)
+    callback?()
+
+catsvzombies.Intro = class Intro
+  constructor: ->
+    @bubbles = [
+      { x: 100, y: 100, text: "All was normal at the Phi Lambda Nu house..." }
+      { x: 367, y: 250, text: "...as the cats partied the night away..." }
+      { x: 633, y: 400, text: "...until suddenly..." }
+      { x: 900, y: 550, text: "ZOMBIES!" }
+    ]
+
+    $('.row').html(
+      (for b in @bubbles
+        "<div class=\"chat-bubble hidden\" style=\"left: #{b.x}px; top: #{b.y}px;\">#{b.text}</div>"
+      ).join('\n')
+    )
+
+    @timer = 0
+    @bubble = 0
+
+  update: (delta) ->
+
+    if @bubble < @bubbles.length
+      @timer += delta / 1000
+      if @timer > 2
+        $('.row .chat-bubble').eq(@bubble).removeClass 'hidden'
+        @bubble += 1
+        @timer -= 2
 
 init()

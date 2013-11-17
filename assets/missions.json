@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Party Crashers",
+        "left": 45,
+        "top": 650
+
+    },
+    {
+        "name": "Pet Store",
+        "left": 145,
+        "top": 500
+
+    },
+    {
+        "name": "The Vet",
+        "left": 400,
+        "top": 400
+
+    },
+    {
+        "name": "Cat Ninja Dojo",
+        "left": 500,
+        "top": 200
+
+    },
+    {
+        "name": "Necromancer!",
+        "left": 650,
+        "top": 45
+
+    }
+]

@@ -1,0 +1,154 @@
+<div class="row">
+    <div class="col-md-3" id="statusArea">
+        <div id="opponent_status">
+            <h3>Zombies</h3>
+            <div class="progress progress-striped hp_indicator">
+                <div class="progress-bar progress-bar-success" style=""></div>
+                <span></span>
+            </div>
+
+            <table class="mana_indicator">
+                <tr>
+                    <td><img src="./assets/mana-grave.png"></td>
+                    <td><img src="./assets/mana-brain.png"></td>
+                </tr>
+                <tr>
+                    <td><h1>0</h1></td>
+                    <td><h1>0</h1></td>
+                </tr>
+            </table>
+            <ul class="mana_active">
+                <li></li>
+            </ul>
+        </div>
+        <hr>
+        <div id="player_status">
+            <h3>Cats</h3>
+            <div class="progress progress-striped hp_indicator">
+                <div class="progress-bar progress-bar-success" style=""></div>
+                <span></span>
+            </div>
+
+            <table class="mana_indicator">
+                <tr>
+                    <td><img src="./assets/mana-mouse.png"></td>
+                    <td><img src="./assets/mana-bird.png"></td>
+                    <td><img src="./assets/mana-fish.png"></td>
+                </tr>
+                <tr>
+                    <td><h1>0</h1></td>
+                    <td><h1>0</h1></td>
+                    <td><h1>0</h1></td>
+                </tr>
+            </table>
+
+            <ul class="mana_active">
+            </ul>
+        </div>
+
+        <div id="player_actions">
+            <div class="pull-bottom">
+                <button type="button" class="btn btn-lg half-width">Attack</button>
+                <button type="button" class="btn btn-lg half-width">Defend</button>
+                <button type="button" class="btn btn-lg">Play Card</button>
+                <button type="button" class="btn btn-lg">End Turn</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9" id="gameArea">
+        <div class="opponent_cards">
+            <div class="creatures pull-bottom">
+                <div><img src="./assets/zombie.png"></div>
+                <div><img src="./assets/zombie.png"><span class="status-icon icon-attack"></span></div>
+                <div><img src="./assets/zombie.png"></div>
+                <div><img src="./assets/zombie.png"></div>
+                <div><img src="./assets/zombie.png"></div>
+            </div>
+        </div>
+        <div class="player_cards">
+            <div class="creatures">
+                <div><img src="./assets/felix-domesticus.png"></div>
+                <div><img src="./assets/felix-domesticus.png"></div>
+                <div><img src="./assets/felix-domesticus.png"></div>
+                <div><img src="./assets/felix-domesticus.png"></div>
+                <div><img src="./assets/felix-domesticus.png"></div>
+            </div>
+            <div class="creature_controls">
+                <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left disabled"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right"> </button>
+                        </span>
+                </div>
+                <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right"> </button>
+                        </span>
+                </div>
+                <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right"> </button>
+                        </span>
+                </div>
+                <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right"> </button>
+                        </span>
+                </div>
+                <div>
+                        <span class="controls">
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-left"> </button>
+                            <div class="attack untoggled">
+                                <img class="untoggled" src="assets/btn-attack-untoggled.png">
+                                <img class="toggled" src="assets/btn-attack-toggled.png">
+                            </div>
+                            <div class="defend untoggled hidden">
+                                <img class="untoggled" src="assets/btn-defend-untoggled.png">
+                                <img class="toggled" src="assets/btn-defend-toggled.png">
+                            </div>
+                            <button type="button" class="btn btn-default glyphicon glyphicon-arrow-right disabled"> </button>
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div class="player_hand pull-bottom">
+            <div class="card_stack">
+            </div>
+        </div>
+    </div>
+</div>
