@@ -117,7 +117,7 @@
             padding: 0;
             margin: 0;
             margin-left: -15px;
-            margin-bottom: -25px;
+            margin-bottom: -20px;
         }
 
         div.card_stack div {
@@ -125,6 +125,8 @@
             padding: 0;
             margin: 0;
             position: relative;
+            width: 100px;
+            height: 125px;
         }
 
         div.card_stack div:first-child {
@@ -132,7 +134,7 @@
         }
 
         div.card_stack div img {
-            display: inline;
+            display: inline-block;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -143,7 +145,7 @@
                -moz-animation-name: contract;
             -webkit-animation-duration: 0.5s;
                -moz-animation-duration: 0.5s;
-            margin-left: 10px;
+            margin-left: -80px;
         }
 
         div.card_stack:hover div:not(:first-child) {
@@ -151,45 +153,44 @@
             -moz-animation-name: expand;
             -webkit-animation-duration: 0.5s;
             -moz-animation-duration: 0.5s;
-            margin-left: 80px;
+            margin-left: -10px;
         }
 
         div.card_stack div.selected {
-            /*border-bottom: 5px solid rgba(0,0,0,0);*/
             margin-bottom: 15px;
         }
 
         @-webkit-keyframes expand {
             from {
-                margin-left: 10px;
+                margin-left: -80px;
             }
             to {
-                margin-left: 80px;
+                margin-left: -10px;
             }
         }
         @-moz-keyframes expand {
             from {
-                margin-left: 10px;
+                margin-left: -80px;
             }
             to {
-                margin-left: 80px;
+                margin-left: -10px;
             }
         }
 
         @-webkit-keyframes contract {
             from {
-                margin-left: 80px;
+                margin-left: -10px;
             }
             to {
-                margin-left: 10px;
+                margin-left: -80px;
             }
         }
         @-moz-keyframes contract {
             from {
-                margin-left: 80px;
+                margin-left: -10px;
             }
             to {
-                margin-left: 10px;
+                margin-left: -80px;
             }
         }
 
