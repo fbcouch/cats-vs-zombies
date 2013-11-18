@@ -46,6 +46,8 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
 
     @start_turn 0
 
+    @gamestate = 1 # 1 = playing, 0 = over
+
   create_card: (card) ->
     c = JSON.parse JSON.stringify card
     c.uuid =
@@ -57,26 +59,49 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
   update: (delta) ->
     player.update(delta) for player in @players
 
-    # command card
-    if @current_player() is @player
-      @command_card.defend.removeClass('btn-primary') if @command_card.defend.hasClass('btn-primary')
-      @command_card.end_turn.addClass('btn-primary') if not @command_card.end_turn.hasClass('btn-primary')
-      if not @turn_state.attacked and not @turn_state.combat_mode
-        @command_card.attack.addClass('btn-primary') if not @command_card.attack.hasClass('btn-primary')
-      else
-        @command_card.attack.removeClass('btn-primary') if @command_card.attack.hasClass('btn-primary')
-    else
-      @command_card.end_turn.removeClass('btn-primary') if @command_card.end_turn.hasClass('btn-primary')
-      @command_card.attack.removeClass('btn-primary') if @command_card.attack.hasClass('btn-primary')
-      if @turn_state.combat_mode
-        @command_card.defend.addClass('btn-primary') if not @command_card.defend.hasClass('btn-primary')
-      else
+    if @gamestate is 1
+      # command card
+      if @current_player() is @player
         @command_card.defend.removeClass('btn-primary') if @command_card.defend.hasClass('btn-primary')
+        @command_card.end_turn.addClass('btn-primary') if not @command_card.end_turn.hasClass('btn-primary')
+        if not @turn_state.attacked and not @turn_state.combat_mode
+          @command_card.attack.addClass('btn-primary') if not @command_card.attack.hasClass('btn-primary')
+        else
+          @command_card.attack.removeClass('btn-primary') if @command_card.attack.hasClass('btn-primary')
+      else
+        @command_card.end_turn.removeClass('btn-primary') if @command_card.end_turn.hasClass('btn-primary')
+        @command_card.attack.removeClass('btn-primary') if @command_card.attack.hasClass('btn-primary')
+        if @turn_state.combat_mode
+          @command_card.defend.addClass('btn-primary') if not @command_card.defend.hasClass('btn-primary')
+        else
+          @command_card.defend.removeClass('btn-primary') if @command_card.defend.hasClass('btn-primary')
 
-    if @player.get_selected_card() and @can_play_card @player, @player.get_selected_card()
-      @command_card.play_card.addClass('btn-primary') if not @command_card.play_card.hasClass('btn-primary')
+      if @player.get_selected_card() and @can_play_card @player, @player.get_selected_card()
+        @command_card.play_card.addClass('btn-primary') if not @command_card.play_card.hasClass('btn-primary')
+      else
+        @command_card.play_card.removeClass('btn-primary') if @command_card.play_card.hasClass('btn-primary')
+
+      if @players[0].curhp <= 0
+        @end_game false
+      else if @players[1].curhp <= 0
+        @end_game true
     else
-      @command_card.play_card.removeClass('btn-primary') if @command_card.play_card.hasClass('btn-primary')
+      # game is over
+      $('.creature_controls').addClass('hidden')
+      $('#player_actions').addClass('hidden')
+
+  end_game: (victory) ->
+    @gamestate = 0
+    resultbox = $('#result').removeClass('hidden')
+
+    resultbox.find('.result-title').html(if victory then 'Victory!' else 'Defeat!')
+    resultbox.find('.result-info').html(if victory then 'You defeated the zombies!' else 'You were defeated by the zombies!')
+
+    resultbox.find('.btn:contains("World Overview")').click =>
+      console.log 'to world view'
+
+    resultbox.find('.btn:contains("Change Deck")').click =>
+      console.log 'change deck'
 
   end_turn_clicked: ->
     if @current_player() is @player

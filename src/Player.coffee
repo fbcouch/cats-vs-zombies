@@ -29,6 +29,7 @@ window.catsvzombies.AbstractPlayer = class AbstractPlayer
       if not @mana_used[key]?
         @mana_used[key] = 0
 
+    @curhp = 0 if @curhp < 0
     @hp_indicator.update()
     @mana_indicator.update()
     @creatures.update()

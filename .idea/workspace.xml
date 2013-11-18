@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76b4a27f-7646-458e-8adc-0962bd529363" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" afterPath="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.coffee" afterPath="$PROJECT_DIR$/src/Player.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/battleScreen.html" afterPath="$PROJECT_DIR$/battleScreen.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catsvzombies.css" afterPath="$PROJECT_DIR$/catsvzombies.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intro.html" afterPath="$PROJECT_DIR$/intro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.coffee" afterPath="$PROJECT_DIR$/src/main.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cats-vs-zombies.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,17 +20,17 @@
     <file path="/main.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384733320790" ignored="false" />
     <file path="/Gruntfile.js" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384008445807" ignored="false" />
     <file path="/.gitignore" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384009001868" ignored="false" />
-    <file path="/CatsVsZombiesGame.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384637492403" ignored="false" />
+    <file path="/CatsVsZombiesGame.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384735935991" ignored="false" />
     <file path="/cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384029151190" ignored="false" />
     <file path="/zombie-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384473122606" ignored="false" />
     <file path="/cat-cards.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384613196685" ignored="false" />
     <file path="/Screen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384205679841" ignored="false" />
     <file path="/Card.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384387508769" ignored="false" />
-    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384637736917" ignored="false" />
+    <file path="/Player.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384735975275" ignored="false" />
     <file path="/LevelScreen.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384388309009" ignored="false" />
     <file path="/CardStack.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384287610988" ignored="false" />
     <file path="/ControlledPlayer.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384211409645" ignored="false" />
-    <file path="/AIPlayer.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384554244104" ignored="false" />
+    <file path="/AIPlayer.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384735734845" ignored="false" />
     <file path="/ActiveMana.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384211825847" ignored="false" />
     <file path="/ManaIndicator.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384212029079" ignored="false" />
     <file path="/ContextMenu.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384388130428" ignored="false" />
@@ -44,10 +45,10 @@
     <file path="/decks.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384613319953" ignored="false" />
     <file path="/thoughts" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384721246970" ignored="false" />
     <file path="/overworld.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384722093840" ignored="false" />
-    <file path="/catsvzombies.css" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384732729273" ignored="false" />
+    <file path="/catsvzombies.css" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384734820871" ignored="false" />
     <file path="/Overworld.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384729006216" ignored="false" />
     <file path="/intro.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384732533100" ignored="false" />
-    <file path="/battleScreen.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384733332964" ignored="false" />
+    <file path="/battleScreen.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384734868317" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,15 +111,6 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="35" selection-start="892" selection-end="892" vertical-scroll-proportion="-13.730769">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="overworld.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/overworld.html">
               <provider selected="true" editor-type-id="text-editor">
@@ -132,71 +124,28 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main.coffee">
+          <file leaf-file-name="CatsVsZombiesGame.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="68" column="19" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <marker date="1384733320502" expanded="true" signature="2734:2740" placeholder="..." />
-                    <marker date="1384733320502" expanded="true" signature="2734:2742" placeholder="..." />
-                    <marker date="1384733320502" expanded="true" signature="2734:2750" placeholder="..." />
-                    <marker date="1384733320502" expanded="true" signature="2734:2760" placeholder="..." />
-                    <marker date="1384733320502" expanded="true" signature="2734:2764" placeholder="..." />
-                    <marker date="1384733320502" expanded="true" signature="2766:2782" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="battleScreen.html" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/battleScreen.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+                <state line="88" column="11" selection-start="3282" selection-end="3282" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="intro.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/intro.html">
+          <file leaf-file-name="AIPlayer.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/AIPlayer.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                <state line="8" column="52" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Overworld.coffee" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Overworld.coffee">
+          <file leaf-file-name="Player.coffee" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Player.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="22" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <marker date="1384729034565" expanded="true" signature="556:561" placeholder="..." />
-                    <marker date="1384729034565" expanded="true" signature="556:562" placeholder="..." />
-                    <marker date="1384729034565" expanded="true" signature="556:564" placeholder="..." />
-                    <marker date="1384729034565" expanded="true" signature="556:581" placeholder="..." />
-                    <marker date="1384729034565" expanded="true" signature="556:599" placeholder="..." />
-                    <marker date="1384729034565" expanded="true" signature="556:603" placeholder="..." />
-                    <marker date="1384729034565" expanded="true" signature="605:618" placeholder="..." />
-                    <marker date="1384729034565" expanded="true" signature="1507:1651" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HandIndicator.coffee" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/HandIndicator.coffee">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HPIndicator.coffee" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/HPIndicator.coffee">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="74" selection-start="357" selection-end="425" vertical-scroll-proportion="0.0">
+                <state line="99" column="97" selection-start="3018" selection-end="3018" vertical-scroll-proportion="0.7280093">
                   <folding />
                 </state>
               </provider>
@@ -206,10 +155,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="catsvzombies.css" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="catsvzombies.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/catsvzombies.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="378" column="15" selection-start="6455" selection-end="6455" vertical-scroll-proportion="0.8679245">
+                <state line="385" column="11" selection-start="6576" selection-end="6576" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="battleScreen.html" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/battleScreen.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="152" column="38" selection-start="7810" selection-end="7810" vertical-scroll-proportion="0.7888631">
                   <folding />
                 </state>
               </provider>
@@ -235,12 +193,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/AIPlayer.coffee" />
         <option value="$PROJECT_DIR$/src/CreatureStack.coffee" />
         <option value="$PROJECT_DIR$/assets/cat-cards.json" />
         <option value="$PROJECT_DIR$/assets/decks.json" />
-        <option value="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
-        <option value="$PROJECT_DIR$/src/Player.coffee" />
         <option value="$PROJECT_DIR$/src/catsvzombies.css" />
         <option value="$PROJECT_DIR$/thoughts" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -248,9 +203,12 @@
         <option value="$PROJECT_DIR$/assets/missions.json" />
         <option value="$PROJECT_DIR$/src/Overworld.coffee" />
         <option value="$PROJECT_DIR$/intro.html" />
-        <option value="$PROJECT_DIR$/catsvzombies.css" />
         <option value="$PROJECT_DIR$/src/main.coffee" />
+        <option value="$PROJECT_DIR$/catsvzombies.css" />
         <option value="$PROJECT_DIR$/battleScreen.html" />
+        <option value="$PROJECT_DIR$/src/CatsVsZombiesGame.coffee" />
+        <option value="$PROJECT_DIR$/src/AIPlayer.coffee" />
+        <option value="$PROJECT_DIR$/src/Player.coffee" />
       </list>
     </option>
   </component>
@@ -590,13 +548,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/zombie-cards.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="422" selection-end="435" vertical-scroll-proportion="0.44685715">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CreatureStack.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="88" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0">
@@ -607,20 +558,6 @@
     <entry file="file://$PROJECT_DIR$/assets/decks.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="16" selection-start="496" selection-end="496" vertical-scroll-proportion="-6.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="45" selection-start="2041" selection-end="2041" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="19" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -639,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HPIndicator.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="74" selection-start="357" selection-end="425" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/missions.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="1" selection-start="426" selection-end="426" vertical-scroll-proportion="0.61927146">
@@ -657,14 +587,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="22" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1384729034565" expanded="true" signature="556:561" placeholder="..." />
-            <marker date="1384729034565" expanded="true" signature="556:562" placeholder="..." />
-            <marker date="1384729034565" expanded="true" signature="556:564" placeholder="..." />
-            <marker date="1384729034565" expanded="true" signature="556:581" placeholder="..." />
-            <marker date="1384729034565" expanded="true" signature="556:599" placeholder="..." />
-            <marker date="1384729034565" expanded="true" signature="556:603" placeholder="..." />
-            <marker date="1384729034565" expanded="true" signature="605:618" placeholder="..." />
-            <marker date="1384729034565" expanded="true" signature="1507:1651" placeholder="..." />
+            <marker date="1384729034565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384729034565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384729034565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384729034565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384729034565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384729034565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384729034565" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384729034565" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -672,6 +602,34 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="35" selection-start="892" selection-end="892" vertical-scroll-proportion="-13.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="19" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1384733320502" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384733320502" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384733320502" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384733320502" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384733320502" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384733320502" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HPIndicator.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="74" selection-start="357" selection-end="425" vertical-scroll-proportion="0.26415095">
           <folding />
         </state>
       </provider>
@@ -687,37 +645,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catsvzombies.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="378" column="15" selection-start="6455" selection-end="6455" vertical-scroll-proportion="0.8679245">
+        <state line="385" column="11" selection-start="6576" selection-end="6576" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="19" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1384733320502" expanded="true" signature="2734:2740" placeholder="..." />
-            <marker date="1384733320502" expanded="true" signature="2734:2742" placeholder="..." />
-            <marker date="1384733320502" expanded="true" signature="2734:2750" placeholder="..." />
-            <marker date="1384733320502" expanded="true" signature="2734:2760" placeholder="..." />
-            <marker date="1384733320502" expanded="true" signature="2734:2764" placeholder="..." />
-            <marker date="1384733320502" expanded="true" signature="2766:2782" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/battleScreen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+        <state line="152" column="38" selection-start="7810" selection-end="7810" vertical-scroll-proportion="0.7888631">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CatsVsZombiesGame.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="11" selection-start="3282" selection-end="3282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AIPlayer.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="52" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="97" selection-start="3018" selection-end="3018" vertical-scroll-proportion="0.7280093">
           <folding />
         </state>
       </provider>
