@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76b4a27f-7646-458e-8adc-0962bd529363" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DeckEditor.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deck.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catsvzombies.css" afterPath="$PROJECT_DIR$/catsvzombies.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DeckEditor.coffee" afterPath="$PROJECT_DIR$/src/DeckEditor.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.coffee" afterPath="$PROJECT_DIR$/src/main.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cats-vs-zombies.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +14,7 @@
     <file path="$PROJECT_DIR$/../space-domination-coffee/src/HUD.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384007509474" ignored="false" />
     <file path="/CoffeeScript File.txt.ft" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384007604409" ignored="false" />
     <file path="/File Header.txt.ft" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384007667980" ignored="false" />
-    <file path="/main.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384750007643" ignored="false" />
+    <file path="/main.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384751554660" ignored="false" />
     <file path="/Gruntfile.js" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384008445807" ignored="false" />
     <file path="/.gitignore" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384009001868" ignored="false" />
     <file path="/CatsVsZombiesGame.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384739762370" ignored="false" />
@@ -54,7 +49,7 @@
     <file path="/victory.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384737525197" ignored="false" />
     <file path="/missions.json" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384747630707" ignored="false" />
     <file path="/deck.html" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384750309481" ignored="false" />
-    <file path="/DeckEditor.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384750428048" ignored="false" />
+    <file path="/DeckEditor.coffee" changelist="76b4a27f-7646-458e-8adc-0962bd529363" time="1384752104387" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,10 +130,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="deck.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="deck.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/deck.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="12" selection-start="209" selection-end="413" vertical-scroll-proportion="-3.2692308">
+                <state line="18" column="12" selection-start="833" selection-end="833" vertical-scroll-proportion="0.36515513">
                   <folding />
                 </state>
               </provider>
@@ -153,12 +148,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.coffee" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="84" column="0" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.43287036">
+                <state line="42" column="118" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.0">
                   <folding>
-                    <marker date="1384750515373" expanded="false" signature="3426:3456" placeholder="..." />
+                    <marker date="1384751568772" expanded="false" signature="3419:3449" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -195,23 +190,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DeckEditor.coffee" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="DeckEditor.coffee" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/DeckEditor.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="7" selection-start="828" selection-end="828" vertical-scroll-proportion="0.7274775">
+                <state line="51" column="46" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.5405405">
                   <folding>
-                    <marker date="1384750487597" expanded="true" signature="1055:1425" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1369" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1354" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1261" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1246" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1235" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1218" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1288" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1327" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1335" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1344" placeholder="..." />
-                    <marker date="1384750487597" expanded="true" signature="1055:1395" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2367" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2334" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2241" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2241" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2226" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2208" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2197" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2180" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2268" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2307" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2315" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2324" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2393" placeholder="..." />
+                    <marker date="1384752152614" expanded="true" signature="2017:2423" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -260,8 +257,8 @@
         <option value="$PROJECT_DIR$/catsvzombies.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/deck.html" />
-        <option value="$PROJECT_DIR$/src/DeckEditor.coffee" />
         <option value="$PROJECT_DIR$/src/main.coffee" />
+        <option value="$PROJECT_DIR$/src/DeckEditor.coffee" />
       </list>
     </option>
   </component>
@@ -694,33 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="209" selection-end="413" vertical-scroll-proportion="-3.2692308">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DeckEditor.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="828" selection-end="828" vertical-scroll-proportion="0.7274775">
-          <folding>
-            <marker date="1384750487597" expanded="true" signature="1055:1425" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1369" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1354" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1261" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1246" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1235" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1218" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1288" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1327" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1335" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1344" placeholder="..." />
-            <marker date="1384750487597" expanded="true" signature="1055:1395" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="36" selection-start="938" selection-end="938" vertical-scroll-proportion="-14.384615">
@@ -730,9 +700,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.43287036">
+        <state line="42" column="118" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1384750515373" expanded="false" signature="3426:3456" placeholder="..." />
+            <marker date="1384751568772" expanded="false" signature="3419:3449" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="12" selection-start="833" selection-end="833" vertical-scroll-proportion="0.36515513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeckEditor.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="46" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.5405405">
+          <folding>
+            <marker date="1384752152614" expanded="true" signature="2017:2367" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2334" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2241" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2241" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2226" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2208" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2197" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2180" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2268" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2307" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2315" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2324" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2393" placeholder="..." />
+            <marker date="1384752152614" expanded="true" signature="2017:2423" placeholder="..." />
           </folding>
         </state>
       </provider>
