@@ -30,8 +30,19 @@ body {
     width: 1280px;
     height: 720px;
     margin: auto;
-    background-image: url('./assets/grassy-bg.png');
     position: relative;
+}
+
+.row.grassy {
+    background-image: url('./assets/grassy-bg.png');
+}
+
+.row.intro {
+    background-image: url('./assets/intro.png');
+}
+
+.row.intro-zombies {
+    background-image: url('./assets/intro-zombies.png');
 }
 
 #opponent_status {}
@@ -357,4 +368,13 @@ div.creature_controls div.defend.untoggled img.toggled {
     border: 2px solid #333;
     font-size: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px 1px;
+}
+
+.intro, .intro-zombies {
+    text-align: center;
+}
+
+.intro > button, .intro-zombies > button {
+    position: relative;
+    top: 600px;
 }

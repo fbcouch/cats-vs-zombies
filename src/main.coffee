@@ -35,15 +35,14 @@ init = ->
   window.preload = new createjs.LoadQueue()
 
   preload.loadManifest manifest
+
   preload.addEventListener 'complete', =>
-    loadScreenTemplate './intro.html', =>
-      screen = new catsvzombies.Intro()
-      createjs.Ticker.setFPS 20
-      createjs.Ticker.addEventListener 'tick', (event) =>
-        screen.update?(event.delta)
+    player =
+      missions: preload.getResult 'missions'
+
+    window.sceneMgr = new catsvzombies.SceneManager(player)
+    sceneMgr.setIntroScene()
 #    loadScreenTemplate './battleScreen.html', =>
-#      player =
-#        missions: preload.getResult 'missions'
 #      game = new catsvzombies.CatsVsZombiesGame()
 
 #    loadScreenTemplate './overworld.html', =>
@@ -54,29 +53,53 @@ window.loadScreenTemplate = (url, callback) ->
     $('#game').html(data)
     callback?()
 
+catsvzombies.SceneManager = class SceneManager
+  constructor: (@player) ->
+    createjs.Ticker.setFPS 20
+    createjs.Ticker.addEventListener 'tick', (event) =>
+      @scene?.update? event.delta
+
+    @scene = null
+
+  setIntroScene: ->
+    loadScreenTemplate './intro.html', =>
+      @scene = new catsvzombies.Intro @introCallback
+
+  introCallback: =>
+    @setBattleScene(@player.missions[0])
+
+  setBattleScene: (mission) ->
+    loadScreenTemplate './battleScreen.html', =>
+      @scene = new catsvzombies.CatsVsZombiesGame @player, mission
+
 catsvzombies.Intro = class Intro
-  constructor: ->
+  constructor: (@callback) ->
     @bubbles = [
       { x: 100, y: 100, text: "All was normal at the Phi Lambda Nu house..." }
       { x: 367, y: 250, text: "...as the cats partied the night away..." }
       { x: 633, y: 400, text: "...until suddenly..." }
-      { x: 900, y: 550, text: "ZOMBIES!" }
+      { x: 900, y: 550, text: "ZOMBIES!", "class": "intro-zombies" }
     ]
 
     $('.row').html(
       (for b in @bubbles
         "<div class=\"chat-bubble hidden\" style=\"left: #{b.x}px; top: #{b.y}px;\">#{b.text}</div>"
-      ).join('\n')
+      ).join('\n') +
+      "<button type=\"button\" class=\"btn btn-lg btn-primary\">Play Game</button>"
     )
 
     @timer = 0
     @bubble = 0
+
+    $('.row > button').click =>
+      @callback?()
 
   update: (delta) ->
 
     if @bubble < @bubbles.length
       @timer += delta / 1000
       if @timer > 2
+        $('.row').removeClass('intro').addClass(@bubbles[@bubble].class) if @bubbles[@bubble].class?
         $('.row .chat-bubble').eq(@bubble).removeClass 'hidden'
         @bubble += 1
         @timer -= 2
