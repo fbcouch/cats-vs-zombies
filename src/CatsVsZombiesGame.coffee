@@ -7,7 +7,7 @@ window.catsvzombies or= {}
 DEBUG = false
 
 window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
-  constructor: () ->
+  constructor: (@player_info, @mission) ->
     @players = []
 
     cat_cards = preload.getResult 'cat-cards'
@@ -92,6 +92,8 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
 
   end_game: (victory) ->
     @gamestate = 0
+    @mission.complete = true if victory
+
     resultbox = $('#result').removeClass('hidden')
 
     resultbox.find('.result-title').html(if victory then 'Victory!' else 'Defeat!')
@@ -99,9 +101,11 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
 
     resultbox.find('.btn:contains("World Overview")').click =>
       console.log 'to world view'
+      sceneMgr.setOverworldScene()
 
     resultbox.find('.btn:contains("Change Deck")').click =>
       console.log 'change deck'
+      sceneMgr.setDeckScene()
 
   end_turn_clicked: ->
     if @current_player() is @player

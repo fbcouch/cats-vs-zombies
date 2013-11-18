@@ -31,6 +31,17 @@ catsvzombies.Overworld = class Overworld
     pct = (1 for mission in @missions when mission.complete).length / @missions.length * 100
     div.width("#{pct}%")
 
+    if pct is 100
+      sceneMgr.setVictoryScene()
+      return
+
+    $('.btn:contains("Start Battle")').click =>
+      mission = @missions[$('#gameArea .battle-point.selected').index() / 2]  # JC note: need /2  here because the tooltips are sibilings (so there are 2 elements per mission)
+      sceneMgr.setBattleScene mission if mission?
+
+    $('.btn:contains("Edit Deck")').click =>
+      sceneMgr.setDeckScene()
+
   createLine: (first, second) ->
     length = Math.sqrt Math.pow((second.left - first.left), 2) + Math.pow((second.top - first.top), 2)
     angle = Math.atan2(second.top - first.top, second.left - first.left) * 180/Math.PI

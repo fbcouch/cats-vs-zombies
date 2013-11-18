@@ -38,7 +38,7 @@ init = ->
 
   preload.addEventListener 'complete', =>
     player =
-      missions: preload.getResult 'missions'
+      missions: JSON.parse JSON.stringify preload.getResult 'missions'
 
     window.sceneMgr = new catsvzombies.SceneManager(player)
     sceneMgr.setIntroScene()
@@ -71,6 +71,21 @@ catsvzombies.SceneManager = class SceneManager
   setBattleScene: (mission) ->
     loadScreenTemplate './battleScreen.html', =>
       @scene = new catsvzombies.CatsVsZombiesGame @player, mission
+
+  setOverworldScene: () ->
+    loadScreenTemplate './overworld.html', =>
+      @scene = new catsvzombies.Overworld @player
+
+  setDeckScene: () ->
+    loadScreenTemplate './deck.html', =>
+      @scene = null
+      console.log 'TODO'
+
+  setVictoryScene: () ->
+    loadScreenTemplate './victory.html', =>
+      @scene = null
+      $('.btn:contains("Play Again")').click =>
+        location.reload() # TODO fix this dirty hack
 
 catsvzombies.Intro = class Intro
   constructor: (@callback) ->
