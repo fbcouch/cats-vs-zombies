@@ -2,31 +2,43 @@
     {
         "name": "Party Crashers",
         "left": 45,
-        "top": 650
-
+        "top": 650,
+        "opponent": "newb-zombie",
+        "rewards": [
+            2002, 2002, 2002, 2002, 2002
+        ]
     },
     {
         "name": "Pet Store",
         "left": 145,
-        "top": 500
-
+        "top": 500,
+        "opponent": "store-zombie",
+        "rewards": [
+            2005, 2005, 2005, 2005, 2005
+        ]
     },
     {
         "name": "The Vet",
         "left": 400,
-        "top": 400
-
+        "top": 400,
+        "opponent": "vet-zombie",
+        "rewards": [
+            2003, 2003, 2003, 2003, 2003
+        ]
     },
     {
         "name": "Cat Ninja Dojo",
         "left": 500,
-        "top": 200
-
+        "top": 200,
+        "opponent": "dojo-zombie",
+        "rewards": [
+            2004, 2004, 2004, 2004, 2004
+        ]
     },
     {
         "name": "Necromancer!",
         "left": 650,
-        "top": 45
-
+        "top": 45,
+        "opponent": "necromancer"
     }
 ]

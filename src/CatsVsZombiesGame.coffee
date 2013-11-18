@@ -16,15 +16,17 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
     # Player (starter) deck
 
     player_cards = []
-    player_cards.push card for card in cat_cards when card.uuid is id for id in decks['default'].cards
+    player_cards.push card for card in cat_cards when card.uuid is id for id in player_info.deck
 
     ai_cards = []
-    ai_cards.push card for card in zombie_cards when card.uuid is id for id in decks['newb-zombie'].cards
+    ai_cards.push card for card in zombie_cards when card.uuid is id for id in decks[mission.opponent].cards
 
     console.log player_cards
     @player = new catsvzombies.Player @, (@create_card card for card in player_cards), $("#player_status"), $( ".player_cards")
     @players.push @player
     @players.push new catsvzombies.AIPlayer @, (@create_card card for card in ai_cards), $("#opponent_status"), $(".opponent_cards")
+
+    @players[1].curhp = @players[1].maxhp = decks[mission.opponent].hp if decks[mission.opponent].hp?
 
     @command_card =
       end_turn: $('button:contains("End Turn")')

@@ -47,5 +47,38 @@
         },
         "strength": 2,
         "toughness": 1
+    },
+    {
+        "uuid": 2003,
+        "image": "alice",
+        "name": "Alice",
+        "type": "creature",
+        "requires": {
+            "bird": 2
+        },
+        "strength": 3,
+        "toughness": 2
+    },
+    {
+        "uuid": 2004,
+        "image": "ninja-cat",
+        "name": "Ninja Cat",
+        "type": "creature",
+        "requires": {
+            "bird": 3
+        },
+        "strength": 5,
+        "toughness": 2
+    },
+    {
+        "uuid": 2005,
+        "image": "felix",
+        "name": "Felix",
+        "type": "creature",
+        "requires": {
+            "mouse": 2
+        },
+        "strength": 2,
+        "toughness": 3
     }
 ]

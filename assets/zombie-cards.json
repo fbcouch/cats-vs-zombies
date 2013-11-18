@@ -27,6 +27,39 @@
         },
         "strength": 1,
         "toughness": 1
+    },
+    {
+        "uuid": 1002,
+        "image": "bloated-zombie",
+        "name": "Bloated Zombie",
+        "type": "creature",
+        "requires": {
+            "grave": 2
+        },
+        "strength": 1,
+        "toughness": 2
+    },
+    {
+        "uuid": 1003,
+        "image": "hunter",
+        "name": "Hunter",
+        "type": "creature",
+        "requires": {
+            "brain": 2
+        },
+        "strength": 3,
+        "toughness": 2
+    },
+    {
+        "uuid": 1004,
+        "image": "skeletal",
+        "name": "Skeletal Remains",
+        "type": "creature",
+        "requires": {
+            "brain": 3
+        },
+        "strength": 5,
+        "toughness": 3
     }
 
 ]

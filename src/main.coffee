@@ -39,6 +39,7 @@ init = ->
   preload.addEventListener 'complete', =>
     player =
       missions: JSON.parse JSON.stringify preload.getResult 'missions'
+      deck: JSON.parse JSON.stringify preload.getResult('decks')['default'].cards
 
     window.sceneMgr = new catsvzombies.SceneManager(player)
     sceneMgr.setIntroScene()
