@@ -94,12 +94,17 @@ window.catsvzombies.CatsVsZombiesGame = class CatsVsZombiesGame
 
   end_game: (victory) ->
     @gamestate = 0
+
+    if victory and not @mission.complete and @mission.rewards?
+      added_cards = true
+      @player_info.cards.push card for card in @mission.rewards
+
     @mission.complete = true if victory
 
     resultbox = $('#result').removeClass('hidden')
 
     resultbox.find('.result-title').html(if victory then 'Victory!' else 'Defeat!')
-    resultbox.find('.result-info').html(if victory then 'You defeated the zombies!' else 'You were defeated by the zombies!')
+    resultbox.find('.result-info').html(if victory then 'You defeated the zombies!' + (if added_cards then '<br>Check out the new cards you can add to your deck!' else '') else 'You were defeated by the zombies!')
 
     resultbox.find('.btn:contains("World Overview")').click =>
       console.log 'to world view'

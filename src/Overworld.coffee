@@ -36,7 +36,8 @@ catsvzombies.Overworld = class Overworld
       return
 
     $('.btn:contains("Start Battle")').click =>
-      mission = @missions[$('#gameArea .battle-point.selected').index() / 2]  # JC note: need /2  here because the tooltips are sibilings (so there are 2 elements per mission)
+      mission = @missions[Math.floor($('#gameArea .battle-point.selected').index() / 2)]  # JC note: need /2  here because the tooltips are sibilings (so there are 2 elements per mission)
+      console.log Math.floor($('#gameArea .battle-point.selected').index() / 2)
       sceneMgr.setBattleScene mission if mission?
 
     $('.btn:contains("Edit Deck")').click =>

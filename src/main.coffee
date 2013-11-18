@@ -42,13 +42,8 @@ init = ->
       deck: JSON.parse JSON.stringify preload.getResult('decks')['default'].cards
       cards: (JSON.parse JSON.stringify card for card in preload.getResult('decks')['default'].cards when card < 9000)
     window.sceneMgr = new catsvzombies.SceneManager(player)
-    sceneMgr.setDeckScene()
-#    sceneMgr.setIntroScene()
-#    loadScreenTemplate './battleScreen.html', =>
-#      game = new catsvzombies.CatsVsZombiesGame()
-
-#    loadScreenTemplate './overworld.html', =>
-#      overworld = new catsvzombies.Overworld()
+#    sceneMgr.setDeckScene()
+    sceneMgr.setIntroScene()
 
 window.loadScreenTemplate = (url, callback) ->
   $.ajax(url).done (data) =>
