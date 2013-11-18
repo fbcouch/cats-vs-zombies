@@ -388,3 +388,9 @@ div.creature_controls div.defend.untoggled img.toggled {
     position: absolute;
     top: 300px;
 }
+
+/* Deck */
+
+.deck_picker .card {
+    margin-bottom: 5px;
+}

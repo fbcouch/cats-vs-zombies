@@ -40,8 +40,10 @@ init = ->
     player =
       missions: JSON.parse JSON.stringify preload.getResult 'missions'
       deck: JSON.parse JSON.stringify preload.getResult('decks')['default'].cards
+      cards: (JSON.parse JSON.stringify card for card in preload.getResult('decks')['default'].cards when card.uuid < 9000)
 
     window.sceneMgr = new catsvzombies.SceneManager(player)
+#    sceneMgr.setDeckScene()
     sceneMgr.setIntroScene()
 #    loadScreenTemplate './battleScreen.html', =>
 #      game = new catsvzombies.CatsVsZombiesGame()
@@ -79,8 +81,7 @@ catsvzombies.SceneManager = class SceneManager
 
   setDeckScene: () ->
     loadScreenTemplate './deck.html', =>
-      @scene = null
-      console.log 'TODO'
+#      @scene = new catsvzombies.DeckEditor @player
 
   setVictoryScene: () ->
     loadScreenTemplate './victory.html', =>
