@@ -107,6 +107,13 @@ catsvzombies.CreatureStack = class CreatureStack
       @creatures[i] = save
       @dirty = true
 
+  swap: (i, j) =>
+    if 0 <= i < @creatures.length and 0 <= j <= @creatures.length
+      save = @creatures[i]
+      @creatures[i] = @creatures[j]
+      @creatures[j] = save
+      @dirty = true
+
   get_attackers: () ->
     for i in [0...@creatures.length]
       @creatures[i] if @creatures[i]? and not @creatures[i].tapped and @is_toggled('attack', i)

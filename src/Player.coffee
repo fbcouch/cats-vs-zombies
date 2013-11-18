@@ -93,7 +93,7 @@ window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
     super @game, @cards, @bindElement, @fieldElement
 
     # JC. For now, don't need responsive indicator
-    #@mana_indicator = new catsvzombies.ManaIndicator @, @game, @element.find('.mana_indicator').eq(0), true
+    @mana_indicator = new catsvzombies.ManaIndicator @, @game, @element.find('.mana_indicator').eq(0), true
     #@mana_active_indicator = new catsvzombies.ActiveManaIndicator @, @game, @element.find('.mana_active')
 
     @hand_stack = new catsvzombies.HandIndicator @, @game, $ '.player_hand .card_stack'
@@ -104,7 +104,7 @@ window.catsvzombies.Player = class Player extends catsvzombies.AbstractPlayer
     super()
     @hand_stack.update()
     # dont need this for now
-    #@mana_active_indicator.update()
+#    @mana_active_indicator.update()
     # instead, activate all mana
     @activate_mana(key) for i in [0...val] for key, val of @mana if @game.current_player() is @
 
